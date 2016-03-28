@@ -1,0 +1,168 @@
+package Controller;
+
+
+
+        import Controller.Interfaces.IGui;
+        import Controller.Interfaces.IPersistor;
+        import Model.DataModel;
+        import Model.Inductee;
+        import Model.Question;
+        import Model.Questionnaire;
+        import View.JPanelOpenCV;
+        import tutorial.Tutorial;
+
+        import java.awt.image.BufferedImage;
+        import java.util.ArrayList;
+
+public class InductionSWController
+{
+    //THIS IS THE STATIC PART
+    //This is the static variable which will point at the
+    //instance of WorldCupController once created.
+    private static InductionSWController instance = null;
+
+    //This is the static method which "manages" the static
+    //instance. A static method is required to access a static
+    //variable.
+    //If the instance is not created it will be created. If it is
+    //already created then we don't need to create another instance.
+    //Either way the one and only instance gets returned.
+    public static InductionSWController getInstance()
+    {
+        if(instance == null)
+        {
+            instance = new InductionSWController();
+        }
+        return instance;
+    }
+
+    /////EVERYTHING BELOW THIS IS THE "INSTANCE PART"
+
+    private ArrayList<Inductee> newlyAddedInductees;
+
+    //Reference to the data model
+    private DataModel dataModel;
+    private Questionnaire questionnaire;
+    //private ArrayList<Inductee> dataModel;
+
+    //Reference to the GUI
+    //Any GUI which implements this interface can be
+    //communicated with by this controller.
+    //If we had just put private UserInputFrame gui then
+    //we would be restricting this controller to only being
+    //capable of connecting to a Swing GUI.
+    private IGui gui;
+
+    //Add a reference to the persistor.
+    private IPersistor persistor;
+
+    //Default constructor
+    //Making this private means that it can only be called
+    //from inside this class (i.e. Only our getInstance()
+    //method can call this now. Nobody outside this class
+    //can create an instance of it.
+    private InductionSWController() {
+        this.newlyAddedInductees = new ArrayList<Inductee>();
+        this.questionnaire = new Questionnaire();
+    }
+
+    public void setDataModel(DataModel dataModel)
+    {
+        this.dataModel = dataModel;
+    }
+
+    public DataModel getDataModel()
+    {
+        return this.dataModel;
+    }
+
+    public Questionnaire getQuestionnaire(){ return this.questionnaire;}
+
+    public void setQuestionnaire(Questionnaire questionnaire) {
+        this.questionnaire = questionnaire;
+    }
+
+
+    public void setGuiReference(IGui gui)
+    {
+        this.gui = gui;
+    }
+
+    public IGui getGuiReference()
+    {
+        return this.gui;
+    }
+
+    public void setPersistor(IPersistor persistor)
+    {
+        this.persistor = persistor;
+    }
+
+    public IPersistor getPersistor()
+    {
+        return this.persistor;
+    }
+
+
+    //This method will be called by the VIEW layer and pass
+    //the information filled in in the Add Player dialog of the
+    //GUI.
+//	public void createPlayer(String name, int age,
+//									 int caps, int goalsScored)
+//	{
+//		Player p = new Player(name, age, caps, goalsScored);
+//		this.dataModel.addPlayer(p);
+//		//Inform the GUI that the data model has been updated.
+//		//This means the GUI will refresh itself.
+//		this.gui.refreshGUI();
+//	}
+
+    public void createInductee( String name, String supervisor, String company, String role, String competencies, long dateOfInduction) {
+        Inductee i = new Inductee( name,  supervisor,  company,  role, competencies, dateOfInduction);
+
+        // Capture the picture and add it to the inductee
+        try {
+            i.setPhoto(takePicture());
+            System.out.println("picture taken, createInductee");
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        // Add the inductee to the datamodel
+        this.dataModel.addInductee(i);
+        this.newlyAddedInductees.add(i);
+
+    }
+
+    public BufferedImage takePicture() throws InterruptedException {
+
+        JPanelOpenCV jp = new JPanelOpenCV();
+        return jp.capturePhoto();
+    }
+
+
+    // Write the newly added inductees and clear the arraylist
+    public void save()
+    {
+//        this.persistor.writeInductee(this.newlyAddedInductees);
+//        this.newlyAddedInductees.clear();
+    }
+
+    // Check the answer given the question and the answer
+
+
+    public boolean checkAnswer(Question q, int ans) {
+
+        return q.checkAnswer(Integer.toString(ans));
+    }
+
+    public void launchVideo() {
+       Tutorial.main(null);
+    }
+
+    public void saveDataModel()
+    {
+        FilePersistor fps = new FilePersistor();
+        fps.write(this.dataModel);
+    }
+}
