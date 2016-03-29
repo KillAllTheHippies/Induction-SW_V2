@@ -178,13 +178,15 @@ public class UserInputFrame extends JFrame {
             // ------------------ADD USER BUTTON------------------
             if (sourceButton.equals(addUserButton)) {
                 InductionSWController.getInstance().createInductee(tfName.getText(),  tfCompany.getText(),
-                        tfJobTitle.getText(), tfSupervisor.getText(), tfCarReg.getText(), tfCompetencies.getText(), System.currentTimeMillis());
+                        tfJobTitle.getText(), tfSupervisor.getText(), tfCarReg.getText(),
+                        tfCompetencies.getText(), System.currentTimeMillis());
                 System.out.println("user added");
 
             // ------------------CLOSE BUTTON------------------
             } else if (sourceButton.equals(closeButton)) {
 //                InductionSWController.getInstance().saveDataModel();
-                InductionSWController.getInstance().getPersistor().write(InductionSWController.getInstance().getDataModel());
+                InductionSWController.getInstance().getPersistor().write
+                        (InductionSWController.getInstance().getDataModel());
                 dispose();
 
             // ------------------TAKE QUIZ BUTTON------------------

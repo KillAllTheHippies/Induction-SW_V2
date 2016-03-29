@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
  */
 
-public class ImageChoiceQuestion extends Question implements Serializable
+public class ImageChoiceQuestion implements Serializable
 
 {
 
@@ -29,7 +29,7 @@ public class ImageChoiceQuestion extends Question implements Serializable
     public ImageChoiceQuestion(String text)
 
     {
-        super(text);
+//        super(text);
 
         choices = new ArrayList<BufferedImage>();
 
@@ -76,33 +76,33 @@ public class ImageChoiceQuestion extends Question implements Serializable
 
             String choiceString = "" + choices.size();
 
-            setAnswer(choiceString);
+//            setAnswer(choiceString);
 
         }
 
     }
 
-    public void display()
-
-    {
-
-// Display the question text
-
-        super.display();
-
-// Display the answer choices
-
-        for (int i = 0; i < choices.size(); i++)
-
-        {
-
-            int choiceNumber = i + 1;
-
-            System.out.println(choiceNumber + ": " + choices.get(i));
-
-        }
-
-    }
+//    public void display()
+//
+//    {
+//
+//// Display the question text
+//
+//        super.display();
+//
+//// Display the answer choices
+//
+//        for (int i = 0; i < choices.size(); i++)
+//
+//        {
+//
+//            int choiceNumber = i + 1;
+//
+//            System.out.println(choiceNumber + ": " + choices.get(i));
+//
+//        }
+//
+//    }
 
     public ArrayList<BufferedImage> getChoices() {
         return choices;

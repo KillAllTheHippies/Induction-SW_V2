@@ -2,20 +2,21 @@ package model;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by Jamie on 27/03/16.
  */
 public class Questionnaire {
 
-    private ArrayList<Question> questions;
-    private String[] answers;
+    private ArrayList<MultipleChoiceQuestion> questions;
+    private boolean[] answers;
 
     public Questionnaire() {
         this.questions = new ArrayList<>();
 
 //        // TEST CODE
-//        ChoiceQuestion q = new ChoiceQuestion("What is Question 1?");
+//        MultipleChoiceQuestion q = new MultipleChoiceQuestion("What is Question 1?");
 //        q.addChoice("True Answer 1", true);
 //        q.addChoice("False Answer 2", false);
 //        q.addChoice("False Answer 3", false);
@@ -25,7 +26,7 @@ public class Questionnaire {
 //        q.setIndex(0);
 //        questions.add(q);
 //
-//        ChoiceQuestion q1 = new ChoiceQuestion("What is Question 2?");
+//        MultipleChoiceQuestion q1 = new MultipleChoiceQuestion("What is Question 2?");
 //        q1.addChoice("True Answer 1", true);
 //        q1.addChoice("False Answer 2", false);
 //        q1.addChoice("False Answer 3", false);
@@ -78,7 +79,7 @@ public class Questionnaire {
 //            while ((strLine = br.readLine()) != null)   {
 //                // split the line on your splitter(s)
 //                String[] splitLine = strLine.split("|"); // here | is used as the delimiter
-//                ChoiceQuestion q = new ChoiceQuestion(splitLine[0]);
+//                MultipleChoiceQuestion q = new MultipleChoiceQuestion(splitLine[0]);
 //                q.addChoice(splitLine[1], true);
 //                q.addChoice(splitLine[2], false);
 //                q.addChoice(splitLine[3], false);
@@ -102,14 +103,19 @@ public class Questionnaire {
             int index = 0;
             while((s = in.readLine()) != null){
 
-                String[] var = s.split("=");
-                ChoiceQuestion q = new ChoiceQuestion(var[0]);
+                String[] var = s.split("="); // use = as our delimiter
+                MultipleChoiceQuestion q = new MultipleChoiceQuestion(var[0]);
                 q.addChoice(var[1], true);
                 q.addChoice(var[2], false);
                 q.addChoice(var[3], false);
                 q.addChoice(var[4], false);
-                // Hardcode the index for now.
-                //TODO: create the index of the question when question is input first.
+
+                /* Shuffle the choices */
+                ArrayList<QChoice> tempChoices = q.getChoices();
+                Collections.shuffle(tempChoices);
+                q.setChoices(tempChoices);
+
+                // Set the index of the question.
                 q.setIndex(index);
                 questions.add(q);
                 index++;
@@ -119,28 +125,28 @@ public class Questionnaire {
         }catch(Exception e){
             e.printStackTrace();
         }
-        this.answers = new String[questions.size()];
+        this.answers = new boolean[questions.size()];
 
 //
 
 
     }
 
-    public void addQuestion(Question q) {
+    public void addQuestion(MultipleChoiceQuestion q) {
         questions.add(q);
     }
 
-    public void addAnswer(String ans, int index) {
+    public void addAnswer(boolean ans, int index) {
 
         this.answers[index] = ans;
 
 
     }
-    public ArrayList<Question> getQuestions() {
+    public ArrayList<MultipleChoiceQuestion> getQuestions() {
         return questions;
     }
 
-    public String[] getAnswers() {
+    public boolean[] getAnswers() {
         return answers;
     }
 }

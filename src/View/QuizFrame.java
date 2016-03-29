@@ -18,7 +18,7 @@ public class QuizFrame extends JFrame{
 
     private JButton checkAnswerButton;
 
-//    private ChoiceQuestion questionnaire;
+//    private MultipleChoiceQuestion questionnaire;
     //private JRadioButton btn1,btn2,btn3,btn4;
     private ArrayList<JRadioButton> btnArray;
 //    private DataModel dataModel;
@@ -51,7 +51,7 @@ public class QuizFrame extends JFrame{
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }
 
-//    private JPanel createQuestionPanel(ChoiceQuestion questionnaire) {
+//    private JPanel createQuestionPanel(MultipleChoiceQuestion questionnaire) {
 //        JRadioButton btn1,btn2,btn3,btn4;
 //        JPanel mainPanel = new JPanel();
 //        ButtonGroup btnGroup = new ButtonGroup();
@@ -98,20 +98,20 @@ public class QuizFrame extends JFrame{
 
         JPanel mainPanel = new JPanel(new GridLayout(0,1));
 
-        for (Question quest : questionnaire.getQuestions()) {
-            if (quest instanceof model.ChoiceQuestion) {
-                QuestionPanel qp = new QuestionPanel((ChoiceQuestion) quest);
+        for (MultipleChoiceQuestion quest : questionnaire.getQuestions()) {
+//            if (quest instanceof MultipleChoiceQuestion) {
+                QuestionPanel qp = new QuestionPanel((MultipleChoiceQuestion) quest);
                 //sp.add(qp);
                 mainPanel.add(qp);
                 System.out.println(quest.getText());
-            }
-            else // else it is an ImageChoiceQuestion
-            {
-                QuestionPanel qp = new QuestionPanel((ImageChoiceQuestion) quest);
-                //sp.add(qp);
-                mainPanel.add(qp);
-                System.out.println(quest.getText());
-            }
+//            }
+//            else // else it is an ImageChoiceQuestion
+//            {
+//                QuestionPanel qp = new QuestionPanel((ImageChoiceQuestion) quest);
+//                //sp.add(qp);
+//                mainPanel.add(qp);
+//                System.out.println(quest.getText());
+//            }
 
         }
 
@@ -188,11 +188,13 @@ public class QuizFrame extends JFrame{
             // TODO: Validation: Ensure all questions are answered.
             if (sourceButton.equals(checkAnswerButton)) {
                 for (int i = 0; i< InductionSWController.getInstance().getQuestionnaire().getQuestions().size(); i++) {
-                    Question quest = InductionSWController.getInstance().getQuestionnaire().getQuestions().get(i);
+                    MultipleChoiceQuestion quest = InductionSWController.getInstance().getQuestionnaire().getQuestions().get(i);
 
                     //output to the console
                     // TODO: Launch a dialog which displays the score (modal)
-                    System.out.println( "+++++++++++" + quest.checkAnswer(InductionSWController.getInstance().getQuestionnaire().getAnswers()[i]) + "+++++++++++");
+                    System.out.println( "+++++++++++" + InductionSWController.getInstance().getQuestionnaire().getAnswers()[i] + "+++++++++++");
+
+                    // Collect the answer
                 }
 
             }

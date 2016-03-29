@@ -8,6 +8,7 @@ import org.opencv.core.Core;
 
 /**
  * Created by Jamie on 01/03/16.
+ * TODO: Connect the inductee to the quiz and collect the answers
  */
 public class MainApplication {
 

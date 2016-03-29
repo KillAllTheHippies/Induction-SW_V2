@@ -16,7 +16,6 @@ import javax.swing.JTable;
 
 import controller.InductionSWController;
 import controller.interfaces.IGui;
-import model.DataModel;
 import model.Inductee;
 
 
@@ -24,8 +23,8 @@ public class DisplayInducteesFrame extends JFrame implements IGui
 {
     //The "scope" of this variable is the entire
     //class. So other methods and inner classes can see it.
-    private JButton addButton;
-    private JButton editButton;
+    private JButton displayScoreButton;
+    private JButton showPhotoButton;
     private JButton deleteButton;
     private JButton okButton;
     private JButton cancelButton;
@@ -106,8 +105,8 @@ public class DisplayInducteesFrame extends JFrame implements IGui
 
     private JPanel createSideButtonPanel()
     {
-        addButton = new JButton("Add");
-        editButton = new JButton("Edit");
+        displayScoreButton = new JButton("Display Score");
+        showPhotoButton = new JButton("Show Photo");
         deleteButton = new JButton("Delete");
 
         //Create an instance of inner class
@@ -117,8 +116,8 @@ public class DisplayInducteesFrame extends JFrame implements IGui
         ButtonsActionListener buttonListener =
                 new ButtonsActionListener(this);
 
-        addButton.addActionListener(buttonListener);
-        editButton.addActionListener(buttonListener);
+        displayScoreButton.addActionListener(buttonListener);
+        showPhotoButton.addActionListener(buttonListener);
         deleteButton.addActionListener(buttonListener);
 
         JPanel sideButtonPanel = new JPanel();
@@ -129,9 +128,9 @@ public class DisplayInducteesFrame extends JFrame implements IGui
 // Can also be written like this in one line.
 //		sideButtonPanel.setLayout(
 //		new BoxLayout(sideButtonPanel, BoxLayout.X_AXIS));
-        sideButtonPanel.add(addButton);
+        sideButtonPanel.add(displayScoreButton);
         sideButtonPanel.add(Box.createVerticalStrut(5));
-        sideButtonPanel.add(editButton);
+        sideButtonPanel.add(showPhotoButton);
         sideButtonPanel.add(Box.createVerticalStrut(5));
         sideButtonPanel.add(deleteButton);
 
@@ -157,8 +156,11 @@ public class DisplayInducteesFrame extends JFrame implements IGui
             //we only added an instance of this listener to
             //JButtons
             JButton sourceButton = (JButton)e.getSource();
-            if(sourceButton.equals(addButton))
+            if(sourceButton.equals(displayScoreButton))
             {
+                //TODO: attach the quiz score to the inductee
+
+
 //                PlayerType [] types =
 //                        {PlayerType.STRIKER, PlayerType.GOALKEEPER};
 //
@@ -190,7 +192,7 @@ public class DisplayInducteesFrame extends JFrame implements IGui
             }
 
 
-            else if(sourceButton.equals(editButton))
+            else if(sourceButton.equals(showPhotoButton))
             {
                 System.out.println("Edit button clicked");
             }
@@ -215,6 +217,7 @@ public class DisplayInducteesFrame extends JFrame implements IGui
                         ArrayList<Inductee> inductees = InductionSWController.getInstance().getDataModel().getInductees();
                         inductees.remove(inducteesTable.getSelectedRow());
                         InductionSWController.getInstance().getDataModel().setInductees(inductees);
+                        refreshGUI();
                     }
                     else if (answer == JOptionPane.NO_OPTION)
                     {
