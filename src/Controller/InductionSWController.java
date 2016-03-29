@@ -4,10 +4,7 @@ package controller;
 
         import controller.interfaces.IGui;
         import controller.interfaces.IPersistor;
-        import model.DataModel;
-        import model.Inductee;
-        import model.Question;
-        import model.Questionnaire;
+        import model.*;
         import view.JPanelOpenCV;
         import videoPlayer.VideoPlayer;
 
@@ -150,10 +147,11 @@ public class InductionSWController
     }
 
 
-    public boolean checkAnswer(Question q, int ans) {
+    public boolean checkAnswer(MultipleChoiceQuestion q, int ans) {
         // Check the answer given the question and the answer
 
-        return q.checkAnswer(Integer.toString(ans));
+//        return this.getQuestionnaire().getAnswers()[ans - 1];
+        return q.checkAnswer(ans);
     }
 
     public void launchVideo() {

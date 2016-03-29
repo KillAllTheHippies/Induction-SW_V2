@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -18,6 +19,7 @@ public class Inductee implements Serializable {
         private long dateOfInduction;
         transient BufferedImage photo;
         private static long serialVersionUID = 6065412820542083316L;
+
         // transient ArrayList<BufferedImage> documents;
 
     public Inductee(String name, String company, String jobTitle, String supervisor, String carReg,  String competencies, long dateOfInduction )

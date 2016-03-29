@@ -7,7 +7,7 @@ import model.DataModel;
  */
 public interface IPersistor {
 //    public void writeInductee(Inductee i, DataModel dm);
-    //public void writeQuestion(ArrayList<ChoiceQuestion> dataModel);
+    //public void writeQuestion(ArrayList<MultipleChoiceQuestion> dataModel);
     DataModel read();
 
     void write(DataModel dm);

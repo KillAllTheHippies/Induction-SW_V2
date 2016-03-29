@@ -2,7 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e4796d8-3638-437e-be61-cca90543abd0" name="Default" comment="Quick comit before restructuring">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new.png" afterPath="$PROJECT_DIR$/new.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Model/QChoice.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Induction-SW/Model/ChoiceQuestion.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/Induction-SW/Model/Question.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/Model/Question.java" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/Model/ChoiceQuestion.java" afterPath="$PROJECT_DIR$/src/Model/MultipleChoiceQuestion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/Controller/InductionSWController.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/Controller/InductionSWController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/Model/ImageChoiceQuestion.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/Model/ImageChoiceQuestion.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/Model/Inductee.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/Model/Inductee.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/Model/Questionnaire.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/Model/Questionnaire.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/MainApplication.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/MainApplication.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel$RadioButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel$RadioButtonsActionListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/QuizFrame$ButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/QuizFrame$ButtonsActionListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/QuizFrame.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/QuizFrame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/UserInputFrame$ButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/UserInputFrame$ButtonsActionListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/view/DisplayInducteesFrame$1.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/view/DisplayInducteesFrame$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/view/DisplayInducteesFrame$ButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/view/DisplayInducteesFrame$ButtonsActionListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/view/DisplayInducteesFrame.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/view/DisplayInducteesFrame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/InductionSWController.java" afterPath="$PROJECT_DIR$/src/Controller/InductionSWController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Interfaces/IPersistor.java" afterPath="$PROJECT_DIR$/src/Controller/Interfaces/IPersistor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Inductee.java" afterPath="$PROJECT_DIR$/src/Model/Inductee.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Questionnaire.java" afterPath="$PROJECT_DIR$/src/Model/Questionnaire.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/DisplayInducteesFrame.java" afterPath="$PROJECT_DIR$/src/View/DisplayInducteesFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/MainApplication.java" afterPath="$PROJECT_DIR$/src/View/MainApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/QuestionPanel.java" afterPath="$PROJECT_DIR$/src/View/QuestionPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/QuizFrame.java" afterPath="$PROJECT_DIR$/src/View/QuizFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/UserInputFrame.java" afterPath="$PROJECT_DIR$/src/View/UserInputFrame.java" />
     </list>
     <ignored path="Induction-SW.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,54 +51,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="FilePersistor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/FilePersistor.java">
+      <file leaf-file-name="Questionnaire.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Questionnaire.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ChoiceQuestion.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/ChoiceQuestion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
+              <caret line="120" column="24" selection-start-line="120" selection-start-column="24" selection-end-line="120" selection-end-column="24" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#327#349#0" expanded="false" />
+                <element signature="e#4674#4675#0" expanded="true" />
+                <element signature="e#4706#4707#0" expanded="true" />
+                <element signature="e#4865#4866#0" expanded="true" />
+                <element signature="e#4897#4898#0" expanded="true" />
+                <element signature="e#4934#4935#0" expanded="true" />
+                <element signature="e#4964#4965#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InducteesTableModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/InducteesTableModel.java">
+      <file leaf-file-name="Inductee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Inductee.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+              <folding>
+                <element signature="e#3398#3399#0" expanded="true" />
+                <element signature="e#3429#3430#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MultipleChoiceQuestion.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/MultipleChoiceQuestion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#701#702#0" expanded="true" />
+                <element signature="e#757#758#0" expanded="true" />
                 <element signature="e#789#790#0" expanded="true" />
-                <element signature="e#822#823#0" expanded="true" />
-                <element signature="e#2902#2903#0" expanded="true" />
-                <element signature="e#2930#2931#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DisplayInducteesFrame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/DisplayInducteesFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="218" column="61" selection-start-line="218" selection-start-column="61" selection-end-line="218" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4860#4861#0" expanded="true" />
-                <element signature="e#4912#4913#0" expanded="true" />
-                <element signature="e#5294#5333#0" expanded="false" />
+                <element signature="e#816#817#0" expanded="true" />
+                <element signature="e#845#846#0" expanded="true" />
+                <element signature="e#873#874#0" expanded="true" />
+                <element signature="e#912#913#0" expanded="true" />
+                <element signature="e#946#947#0" expanded="true" />
+                <element signature="e#992#993#0" expanded="true" />
+                <element signature="e#1022#1023#0" expanded="true" />
+                <element signature="e#1653#1680#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -81,20 +109,34 @@
         <entry file="file://$PROJECT_DIR$/src/view/UserInputFrame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="218" column="0" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
+              <caret line="188" column="24" selection-start-line="188" selection-start-column="24" selection-end-line="188" selection-end-column="24" />
               <folding>
-                <element signature="e#7741#7773#0" expanded="false" />
+                <element signature="e#7790#7822#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InductionSWController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/InductionSWController.java">
+      <file leaf-file-name="ImageChoiceQuestion.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/ImageChoiceQuestion.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="146" column="45" selection-start-line="146" selection-start-column="45" selection-end-line="146" selection-end-column="45" />
-              <folding />
+              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+              <folding>
+                <element signature="e#1723#1750#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuestionPanel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/view/QuestionPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.19512194">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+              <folding>
+                <element signature="e#2127#2179#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,28 +145,32 @@
         <entry file="file://$PROJECT_DIR$/src/view/MainApplication.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+              <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Questionnaire.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/model/Questionnaire.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="4.780488">
-              <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Question.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Question.java">
+      <file leaf-file-name="DisplayInducteesFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/DisplayInducteesFrame.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
-              <folding />
+              <caret line="160" column="40" selection-start-line="160" selection-start-column="40" selection-end-line="160" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuizFrame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/QuizFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="196" column="41" selection-start-line="196" selection-start-column="41" selection-end-line="196" selection-end-column="41" />
+              <folding>
+                <element signature="n#!!doc;n#ButtonsActionListener#0;n#QuizFrame#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -182,15 +228,23 @@
         <option value="$PROJECT_DIR$/src/Model/Inductee.java" />
         <option value="$PROJECT_DIR$/src/model/ChoiceQuestion.java" />
         <option value="$PROJECT_DIR$/src/view/WorldCupTableModel.java" />
-        <option value="$PROJECT_DIR$/src/model/Inductee.java" />
         <option value="$PROJECT_DIR$/src/view/DisplayInducteesTableModel.java" />
         <option value="$PROJECT_DIR$/src/view/InducteesTableModel.java" />
         <option value="$PROJECT_DIR$/src/view/WorldCupFrame.java" />
-        <option value="$PROJECT_DIR$/src/controller/InductionSWController.java" />
         <option value="$PROJECT_DIR$/src/model/DataModel.java" />
-        <option value="$PROJECT_DIR$/src/view/DisplayInducteesFrame.java" />
-        <option value="$PROJECT_DIR$/src/view/UserInputFrame.java" />
         <option value="$PROJECT_DIR$/src/controller/FilePersistor.java" />
+        <option value="$PROJECT_DIR$/src/model/QChoice.java" />
+        <option value="$PROJECT_DIR$/src/model/Question.java" />
+        <option value="$PROJECT_DIR$/src/controller/InductionSWController.java" />
+        <option value="$PROJECT_DIR$/src/model/MultipleChoiceQuestion.java" />
+        <option value="$PROJECT_DIR$/src/model/Questionnaire.java" />
+        <option value="$PROJECT_DIR$/src/view/UserInputFrame.java" />
+        <option value="$PROJECT_DIR$/src/view/DisplayInducteesFrame.java" />
+        <option value="$PROJECT_DIR$/src/model/Inductee.java" />
+        <option value="$PROJECT_DIR$/src/view/QuizFrame.java" />
+        <option value="$PROJECT_DIR$/src/view/MainApplication.java" />
+        <option value="$PROJECT_DIR$/src/view/QuestionPanel.java" />
+        <option value="$PROJECT_DIR$/src/model/ImageChoiceQuestion.java" />
       </list>
     </option>
   </component>
@@ -800,21 +854,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/model/ImageChoiceQuestion.java</url>
-          <line>40</line>
-          <properties />
-          <option name="timeStamp" value="25" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/model/Questionnaire.java</url>
-          <line>105</line>
-          <properties />
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="29" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -823,14 +863,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/controller/InductionSWController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="116" column="44" selection-start-line="116" selection-start-column="44" selection-end-line="116" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/JPanelOpenCV.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -987,14 +1019,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/ChoiceQuestion.java">
+    <entry file="file://$PROJECT_DIR$/src/model/MultipleChoiceQuestion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="47" selection-start-line="48" selection-start-column="47" selection-end-line="48" selection-end-column="47" />
@@ -1078,82 +1103,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/ImageChoiceQuestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/BackEndFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="95" column="40" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/QuizFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding>
-            <element signature="n#!!doc;n#ButtonsActionListener#0;n#QuizFrame#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/QuestionPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/ChoiceQuestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="16" selection-start-line="34" selection-start-column="16" selection-end-line="34" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Inductee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="33" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
-          <folding>
-            <element signature="e#3400#3401#0" expanded="true" />
-            <element signature="e#3448#3449#0" expanded="true" />
-            <element signature="e#3488#3489#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/InducteesTableModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
-            <element signature="e#822#823#0" expanded="true" />
-            <element signature="e#2902#2903#0" expanded="true" />
-            <element signature="e#2930#2931#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/InductionSWController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="146" column="45" selection-start-line="146" selection-start-column="45" selection-end-line="146" selection-end-column="45" />
           <folding />
         </state>
       </provider>
@@ -1168,37 +1121,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/DisplayInducteesFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="218" column="61" selection-start-line="218" selection-start-column="61" selection-end-line="218" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4860#4861#0" expanded="true" />
-            <element signature="e#4912#4913#0" expanded="true" />
-            <element signature="e#5294#5333#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/UserInputFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="218" column="0" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
-          <folding>
-            <element signature="e#7741#7773#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/MainApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/FilePersistor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1207,19 +1129,140 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Question.java">
+    <entry file="file://$PROJECT_DIR$/src/model/QChoice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
+          <caret line="20" column="7" selection-start-line="18" selection-start-column="6" selection-end-line="20" selection-end-column="7" />
+          <folding>
+            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#306#307#0" expanded="true" />
+            <element signature="e#418#419#0" expanded="true" />
+            <element signature="e#448#449#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/InductionSWController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="153" column="34" selection-start-line="153" selection-start-column="34" selection-end-line="153" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/Questionnaire.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="4.780488">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="120" column="24" selection-start-line="120" selection-start-column="24" selection-end-line="120" selection-end-column="24" />
+          <folding>
+            <element signature="e#327#349#0" expanded="false" />
+            <element signature="e#4674#4675#0" expanded="true" />
+            <element signature="e#4706#4707#0" expanded="true" />
+            <element signature="e#4865#4866#0" expanded="true" />
+            <element signature="e#4897#4898#0" expanded="true" />
+            <element signature="e#4934#4935#0" expanded="true" />
+            <element signature="e#4964#4965#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/InducteesTableModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/DisplayInducteesFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="160" column="40" selection-start-line="160" selection-start-column="40" selection-end-line="160" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/MultipleChoiceQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
+            <element signature="e#816#817#0" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#873#874#0" expanded="true" />
+            <element signature="e#912#913#0" expanded="true" />
+            <element signature="e#946#947#0" expanded="true" />
+            <element signature="e#992#993#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1653#1680#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Inductee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="31" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
+          <folding>
+            <element signature="e#3398#3399#0" expanded="true" />
+            <element signature="e#3429#3430#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/MainApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="65" selection-start-line="10" selection-start-column="65" selection-end-line="10" selection-end-column="65" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/QuizFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="196" column="41" selection-start-line="196" selection-start-column="41" selection-end-line="196" selection-end-column="41" />
+          <folding>
+            <element signature="n#!!doc;n#ButtonsActionListener#0;n#QuizFrame#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/UserInputFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="188" column="24" selection-start-line="188" selection-start-column="24" selection-end-line="188" selection-end-column="24" />
+          <folding>
+            <element signature="e#7790#7822#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/ImageChoiceQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+          <folding>
+            <element signature="e#1723#1750#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/QuestionPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19512194">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding>
+            <element signature="e#2127#2179#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
