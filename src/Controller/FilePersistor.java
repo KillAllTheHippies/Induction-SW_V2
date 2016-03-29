@@ -1,15 +1,13 @@
-package Controller;
+package controller;
 
 /**
  * Created by Jamie on 18/03/16.
  */
 
-import Controller.Interfaces.IPersistor;
-import Model.DataModel;
-import Model.Inductee;
+import controller.interfaces.IPersistor;
+import model.DataModel;
 
 import java.io.*;
-import java.util.ArrayList;
 
 
 public class FilePersistor implements IPersistor{

@@ -1,22 +1,16 @@
-package View;
+package view;
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Image;
-import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
 import java.awt.image.WritableRaster;
-import java.io.ByteArrayInputStream;
 import java.io.File;
-import java.io.InputStream;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
 import org.opencv.core.*;
-import org.opencv.imgcodecs.Imgcodecs; // imread, imwrite, etc
 import org.opencv.videoio.VideoCapture;   // VideoCapture
 
 

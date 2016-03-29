@@ -1,10 +1,7 @@
-package Model;
+package model;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
  * Created by Jamie on 27/03/16.

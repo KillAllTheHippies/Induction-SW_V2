@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
@@ -56,6 +56,7 @@ public class Inductee implements Serializable {
     public String toString() {
         return "name: " +name + "\n Supervisor: " +supervisor + "\n Company: " + company +
                 "\nJob Title: " + jobTitle + "\nVehicle Registration: " + carReg +
+                "\nCompetencies: " + competencies +
                 "\nDate of Induction: " + new Date(this.dateOfInduction);
     }
 
@@ -109,6 +110,14 @@ public class Inductee implements Serializable {
 
     public void setDateOfInduction(long dateOfInduction) {
         this.dateOfInduction = dateOfInduction;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
     public BufferedImage getPhoto() {

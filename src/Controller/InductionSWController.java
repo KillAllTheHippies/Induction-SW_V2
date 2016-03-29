@@ -1,15 +1,15 @@
-package Controller;
+package controller;
 
 
 
-        import Controller.Interfaces.IGui;
-        import Controller.Interfaces.IPersistor;
-        import Model.DataModel;
-        import Model.Inductee;
-        import Model.Question;
-        import Model.Questionnaire;
-        import View.JPanelOpenCV;
-        import tutorial.Tutorial;
+        import controller.interfaces.IGui;
+        import controller.interfaces.IPersistor;
+        import model.DataModel;
+        import model.Inductee;
+        import model.Question;
+        import model.Questionnaire;
+        import view.JPanelOpenCV;
+        import videoPlayer.VideoPlayer;
 
         import java.awt.image.BufferedImage;
         import java.util.ArrayList;
@@ -144,6 +144,7 @@ public class InductionSWController
     // Write the newly added inductees and clear the arraylist
     public void save()
     {
+        this.persistor.write(this.dataModel);
 //        this.persistor.writeInductee(this.newlyAddedInductees);
 //        this.newlyAddedInductees.clear();
     }
@@ -156,7 +157,7 @@ public class InductionSWController
     }
 
     public void launchVideo() {
-       Tutorial.main(null);
+       VideoPlayer.main(null);
     }
 
 //    public void saveDataModel()

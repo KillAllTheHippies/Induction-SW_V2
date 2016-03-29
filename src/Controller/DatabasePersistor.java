@@ -1,8 +1,8 @@
-package Controller;
+package controller;
 
-import Controller.Interfaces.IPersistor;
-import Model.DataModel;
-import Model.Inductee;
+import controller.interfaces.IPersistor;
+import model.DataModel;
+import model.Inductee;
 
 
 import java.sql.*;

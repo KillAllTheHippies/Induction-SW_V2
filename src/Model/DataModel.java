@@ -1,4 +1,4 @@
-package Model;
+package model;
 
 
 import java.io.Serializable;
@@ -25,7 +25,7 @@ public class DataModel implements Serializable{
         return inductees;
     }
 
-
-
-
+    public void setInductees(ArrayList<Inductee> inductees) {
+        this.inductees = inductees;
+    }
 }

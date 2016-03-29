@@ -1,4 +1,4 @@
-package tutorial;
+package videoPlayer;
 
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
@@ -17,7 +17,7 @@ import uk.co.caprica.vlcj.discovery.NativeDiscovery;
 import uk.co.caprica.vlcj.player.MediaPlayer;
 import uk.co.caprica.vlcj.player.MediaPlayerEventAdapter;
 
-public class Tutorial {
+public class VideoPlayer {
 
     private final JFrame frame;
 
@@ -34,12 +34,12 @@ public class Tutorial {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
-                new Tutorial();
+                new VideoPlayer();
             }
         });
     }
 
-    public Tutorial() {
+    public VideoPlayer() {
         frame = new JFrame("My First Media Player");
         frame.setBounds(100, 100, 600, 400);
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);

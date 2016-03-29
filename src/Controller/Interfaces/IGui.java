@@ -1,4 +1,4 @@
-package Controller.Interfaces;
+package controller.interfaces;
 
 /**
  * Created by Jamie on 02/03/16.

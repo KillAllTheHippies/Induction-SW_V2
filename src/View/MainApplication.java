@@ -1,14 +1,10 @@
-package View;
+package view;
 
-import Controller.DatabasePersistor;
-import Controller.FilePersistor;
-import Controller.InductionSWController;
-import Controller.Interfaces.IPersistor;
-import Model.DataModel;
-import Model.Inductee;
+import controller.FilePersistor;
+import controller.InductionSWController;
+import controller.interfaces.IPersistor;
+import model.DataModel;
 import org.opencv.core.Core;
-
-import java.util.ArrayList;
 
 /**
  * Created by Jamie on 01/03/16.

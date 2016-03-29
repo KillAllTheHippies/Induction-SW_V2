@@ -1,7 +1,5 @@
-package View;
+package view;
 
-import Controller.InductionSWController;
-import Model.Inductee;
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;

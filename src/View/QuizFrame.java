@@ -1,8 +1,8 @@
-package View;
+package view;
 
 
-import Controller.InductionSWController;
-import Model.*;
+import controller.InductionSWController;
+import model.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -99,7 +99,7 @@ public class QuizFrame extends JFrame{
         JPanel mainPanel = new JPanel(new GridLayout(0,1));
 
         for (Question quest : questionnaire.getQuestions()) {
-            if (quest instanceof Model.ChoiceQuestion) {
+            if (quest instanceof model.ChoiceQuestion) {
                 QuestionPanel qp = new QuestionPanel((ChoiceQuestion) quest);
                 //sp.add(qp);
                 mainPanel.add(qp);

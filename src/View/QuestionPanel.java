@@ -1,11 +1,9 @@
-package View;
+package view;
 
-import Controller.InductionSWController;
-import Model.ChoiceQuestion;
-import Model.DataModel;
-import Model.ImageChoiceQuestion;
-import Model.Question;
-import net.miginfocom.swing.MigLayout;
+import controller.InductionSWController;
+import model.ChoiceQuestion;
+import model.ImageChoiceQuestion;
+import model.Question;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,7 +11,6 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
  * Created by Jamie on 07/03/16.

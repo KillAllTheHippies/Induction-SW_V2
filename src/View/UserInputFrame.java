@@ -1,7 +1,7 @@
-package View;
+package view;
 
-import Controller.InductionSWController;
-import Model.Inductee;
+import controller.InductionSWController;
+import model.Inductee;
 import net.miginfocom.swing.MigLayout;
 
 import javax.swing.*;
@@ -199,19 +199,23 @@ public class UserInputFrame extends JFrame {
                 bef.setSize(400,300);
                 bef.setVisible(true);
             }
-            // ------------------ADD TWEET BUTTON------------------
+            // ------------------DISPLAY VIDEO BUTTON------------------
             else if (sourceButton.equals(displayVideoButton)) {
                 InductionSWController.getInstance().launchVideo();
             }
             // ------------------DISPLAY USERS BUTTON------------------
             else {
-                int count = 0;
-                for (Inductee i : InductionSWController.getInstance().getDataModel().getInductees()) {
-                    System.out.println(i.toString());
+//                int count = 0;
+//                for (Inductee i : InductionSWController.getInstance().getDataModel().getInductees()) {
+//                    System.out.println(i.toString());
+//
+//                    count++;
+//                    showImage(i.getPhoto(), i.getName(), count * 25, count * 10);
+//                }
 
-                    count++;
-                    showImage(i.getPhoto(), i.getName(), count * 25, count * 10);
-                }
+                DisplayInducteesFrame dif = new DisplayInducteesFrame("View Inductees");
+                dif.setSize(400,300);
+                dif.setVisible(true);
 
             } // end else
 

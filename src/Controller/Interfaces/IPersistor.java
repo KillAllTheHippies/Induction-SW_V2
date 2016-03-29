@@ -1,10 +1,6 @@
-package Controller.Interfaces;
+package controller.interfaces;
 
-import Model.ChoiceQuestion;
-import Model.DataModel;
-import Model.Inductee;
-
-import java.util.ArrayList;
+import model.DataModel;
 
 /**
  * Created by Jamie on 29/02/16.
