@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -14,20 +13,21 @@ import java.util.Date;
  */
 public class Inductee implements Serializable {
 
-        private String name, supervisor, company, role;
+        private String name, company, jobTitle, supervisor, carReg;
         private String competencies;
         private long dateOfInduction;
         transient BufferedImage photo;
         private static long serialVersionUID = 6065412820542083316L;
         // transient ArrayList<BufferedImage> documents;
 
-    public Inductee(String name, String supervisor, String company, String role, String competencies, long dateOfInduction )
+    public Inductee(String name, String company, String jobTitle, String supervisor, String carReg,  String competencies, long dateOfInduction )
     {
         this.competencies = competencies;
         this.name = name;
         this.supervisor = supervisor;
         this.company = company;
-        this.role = role;
+        this.carReg = carReg;
+        this.jobTitle = jobTitle;
         this.dateOfInduction = dateOfInduction;
     }
 
@@ -55,7 +55,8 @@ public class Inductee implements Serializable {
     @Override
     public String toString() {
         return "name: " +name + "\n Supervisor: " +supervisor + "\n Company: " + company +
-                "\nRole: " + role + "\nDate of Induction: " + new Date(this.dateOfInduction);
+                "\nJob Title: " + jobTitle + "\nVehicle Registration: " + carReg +
+                "\nDate of Induction: " + new Date(this.dateOfInduction);
     }
 
     /* *************<- GETTERS AND SETTERS ->************
@@ -86,12 +87,12 @@ public class Inductee implements Serializable {
         this.company = company;
     }
 
-    public String getRole() {
-        return role;
+    public String getCarReg() {
+        return carReg;
     }
 
-    public void setRole(String role) {
-        this.role = role;
+    public void setCarReg(String carReg) {
+        this.carReg = carReg;
 }
 
     public String getCompetencies() {

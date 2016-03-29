@@ -12,6 +12,7 @@ import java.util.ArrayList;
 
 /**
  * Created by Jamie on 07/03/16.
+ * Frame that holds the Questionnaire
  */
 public class QuizFrame extends JFrame{
 
@@ -20,13 +21,13 @@ public class QuizFrame extends JFrame{
 //    private ChoiceQuestion questionnaire;
     //private JRadioButton btn1,btn2,btn3,btn4;
     private ArrayList<JRadioButton> btnArray;
-    private DataModel dataModel;
+//    private DataModel dataModel;
     private Questionnaire questionnaire;
 
     public QuizFrame(String title) throws HeadlessException {
         super(title);
         // Reference to the datamodel
-        dataModel = InductionSWController.getInstance().getDataModel();
+//        dataModel = InductionSWController.getInstance().getDataModel();
         btnArray = new ArrayList<>();
         questionnaire = new Questionnaire();
 

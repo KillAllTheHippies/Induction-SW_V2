@@ -81,9 +81,14 @@ public class BackEndFrame extends JFrame {
 
         tfQuestion = new JTextField("", 20);
         tfAns1 = new JTextField("", 20);
+        tfAns1.setBackground(Color.green);
         tfAns2 = new JTextField("", 20);
+        tfAns2.setBackground(Color.red);
+        tfAns2.setOpaque(true);
         tfAns3 = new JTextField("", 20);
+        tfAns3.setBackground(Color.red);
         tfAns4 = new JTextField("", 20);
+        tfAns4.setBackground(Color.red);
 
 
         JPanel panel = new JPanel(new MigLayout("wrap 3"));

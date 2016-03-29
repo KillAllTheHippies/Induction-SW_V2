@@ -19,16 +19,17 @@ public class UserInputFrame extends JFrame {
 
     private JButton closeButton;
     private JButton addUserButton;
-    private JButton showTweetsButton;
+    private JButton takeQuizButton;
     private JButton displayUsersButton;
     private JButton BackEndButton;
     private JButton displayVideoButton;
 
     private JTextField tfName;
     private JTextField tfCompany;
-    private JTextField tfRole;
-    private JTextField tfCompetencies;
+    private JTextField tfJobTitle;
+    private JTextField tfCarReg;
     private JTextField tfSupervisor;
+    private JTextField tfCompetencies;
 
 
     public UserInputFrame(String title) throws HeadlessException {
@@ -75,26 +76,31 @@ public class UserInputFrame extends JFrame {
         JLabel lblName = new JLabel("Name:");
         JLabel lblSupervisor = new JLabel("Supervisor:");
         JLabel lblCompany = new JLabel("Company:");
-        JLabel lblRole = new JLabel("Role:");
+        JLabel lblJobTitle = new JLabel("Job Title:");
         JLabel lblCompetencies = new JLabel("Competencies:");
+        JLabel lblCarReg = new JLabel("Vehicle Registration:");
+
 
         tfName = new JTextField("", 20);
         tfSupervisor = new JTextField("", 20);
         tfCompany = new JTextField("", 20);
-        tfRole = new JTextField("", 20);
+        tfJobTitle = new JTextField("", 20);
         tfCompetencies = new JTextField("", 20);
+        tfCarReg = new JTextField("", 20);
 
 
         JPanel panel = new JPanel(new MigLayout("wrap 3"));
         panel.add(lblName, "cell 0 0");
         panel.add(tfName, "span 2");
-        panel.add(lblSupervisor, "cell 0 1");
-        panel.add(tfSupervisor, "span 2");
-        panel.add(lblCompany, "cell 0 2");
+        panel.add(lblCompany, "cell 0 1");
         panel.add(tfCompany, "span 2");
-        panel.add(lblRole, "cell 0 3");
-        panel.add(tfRole, "span 2");
-        panel.add(lblCompetencies, "cell 0 4");
+        panel.add(lblJobTitle, "cell 0 2");
+        panel.add(tfJobTitle, "span 2");
+        panel.add(lblSupervisor, "cell 0 3");
+        panel.add(tfSupervisor, "span 2");
+        panel.add(lblCarReg, "cell 0 4");
+        panel.add(tfCarReg, "span 2");
+        panel.add(lblCompetencies, "cell 0 5");
         panel.add(tfCompetencies, "span 2");
 
         return panel;
@@ -123,7 +129,7 @@ public class UserInputFrame extends JFrame {
         this.addUserButton = new JButton("Add User");
         this.displayUsersButton = new JButton("Display Users");
         this.BackEndButton = new JButton("Launch Backend");
-        this.showTweetsButton = new JButton("Show Tweets");
+        this.takeQuizButton = new JButton("Take Quiz");
         this.displayVideoButton = new JButton("Display Video");
 
 
@@ -133,7 +139,7 @@ public class UserInputFrame extends JFrame {
         ButtonsActionListener buttonListener = new ButtonsActionListener(this);
         addUserButton.addActionListener(buttonListener);
         displayUsersButton.addActionListener(buttonListener);
-        showTweetsButton.addActionListener(buttonListener);
+        takeQuizButton.addActionListener(buttonListener);
         BackEndButton.addActionListener(buttonListener);
         displayVideoButton.addActionListener(buttonListener);
 
@@ -148,7 +154,7 @@ public class UserInputFrame extends JFrame {
         sideButtonPanel.add(Box.createVerticalStrut(20));
         sideButtonPanel.add(displayVideoButton);
         sideButtonPanel.add(Box.createVerticalStrut(5));
-        sideButtonPanel.add(showTweetsButton);
+        sideButtonPanel.add(takeQuizButton);
 
 
         return sideButtonPanel;
@@ -171,8 +177,8 @@ public class UserInputFrame extends JFrame {
 
             // ------------------ADD USER BUTTON------------------
             if (sourceButton.equals(addUserButton)) {
-                InductionSWController.getInstance().createInductee(tfName.getText(), tfSupervisor.getText(), tfCompany.getText(),
-                        tfRole.getText(), tfCompetencies.getText(), System.currentTimeMillis());
+                InductionSWController.getInstance().createInductee(tfName.getText(),  tfCompany.getText(),
+                        tfJobTitle.getText(), tfSupervisor.getText(), tfCarReg.getText(), tfCompetencies.getText(), System.currentTimeMillis());
                 System.out.println("user added");
 
             // ------------------CLOSE BUTTON------------------
@@ -180,8 +186,8 @@ public class UserInputFrame extends JFrame {
                 InductionSWController.getInstance().saveDataModel();
                 dispose();
 
-            // ------------------SHOW TWEETS BUTTON------------------
-            } else if (sourceButton.equals(showTweetsButton)) {
+            // ------------------TAKE QUIZ BUTTON------------------
+            } else if (sourceButton.equals(takeQuizButton)) {
                 QuizFrame qf = new QuizFrame("Quiz");
 
                 qf.setSize(400,300);

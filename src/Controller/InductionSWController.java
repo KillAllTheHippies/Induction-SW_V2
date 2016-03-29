@@ -117,8 +117,8 @@ public class InductionSWController
 //		this.gui.refreshGUI();
 //	}
 
-    public void createInductee( String name, String supervisor, String company, String role, String competencies, long dateOfInduction) {
-        Inductee i = new Inductee( name,  supervisor,  company,  role, competencies, dateOfInduction);
+    public void createInductee( String name, String company, String jobTitle, String supervisor, String carReg, String competencies, long dateOfInduction) {
+        Inductee i = new Inductee( name, company, jobTitle, supervisor, carReg, competencies, dateOfInduction);
 
         // Capture the picture and add it to the inductee
         try {
@@ -148,10 +148,9 @@ public class InductionSWController
 //        this.newlyAddedInductees.clear();
     }
 
-    // Check the answer given the question and the answer
-
 
     public boolean checkAnswer(Question q, int ans) {
+        // Check the answer given the question and the answer
 
         return q.checkAnswer(Integer.toString(ans));
     }

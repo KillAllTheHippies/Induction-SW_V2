@@ -13,6 +13,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+import java.util.Collections;
 
 /**
  * Created by Jamie on 07/03/16.
@@ -23,15 +24,14 @@ public class QuestionPanel extends JPanel {
 //    private ImageChoiceQuestion iq;
     private Question q;
     private JRadioButton btn1,btn2,btn3,btn4;
-    private ArrayList<JRadioButton> btnArray;
+    private ArrayList<JRadioButton> btnArray = new ArrayList<>();
     private BufferedImage im;
-    private DataModel dataModel;
+//    private DataModel dataModel;
 
     public QuestionPanel(ChoiceQuestion q) {
         this.q = q;
-        this.dataModel = InductionSWController.getInstance().getDataModel();
-        btnArray = new ArrayList<>();
-
+//        this.dataModel = InductionSWController.getInstance().getDataModel();
+        this.setLayout(new FlowLayout(FlowLayout.LEFT));
         btn1 = new JRadioButton();
         btn2 = new JRadioButton();
         btn3 = new JRadioButton();
@@ -59,13 +59,14 @@ public class QuestionPanel extends JPanel {
         JLabel lblQuestion = new JLabel(q.getText());
         this.add(lblQuestion);
 
+
         // Create the radiobuttons
         for (int i =0; i < q.getChoices().size(); i++) {
+
             String s = q.getChoices().get(i);
             JRadioButton btn = btnArray.get(i);
             btn.setText(s);
             btnGroup.add(btn);
-
             this.add(btn);
         }
 
@@ -73,7 +74,6 @@ public class QuestionPanel extends JPanel {
 
     public QuestionPanel(ImageChoiceQuestion iq) {
         this.q = iq;
-        btnArray = new ArrayList<>();
 
         btn1 = new JRadioButton();
         btn2 = new JRadioButton();
@@ -139,11 +139,11 @@ public class QuestionPanel extends JPanel {
         public void actionPerformed(ActionEvent e) {
             //Listener for button clicks.
             JRadioButton sourceButton = (JRadioButton) e.getSource();
-            //TODO: Create the answers arraylist
+
             // ------------------BTN1------------------
             if (sourceButton.equals(btn1)) {
                 System.out.println(InductionSWController.getInstance().checkAnswer(q, 1));
-                // Add the answer selected to the position in the arraylist of answers
+                // Add the answer selected to the position in the array of answers
                 InductionSWController.getInstance().getQuestionnaire().addAnswer("1", q.getIndex());
 
                 // ------------------BTN2------------------
