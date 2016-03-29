@@ -2,28 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1e4796d8-3638-437e-be61-cca90543abd0" name="Default" comment="Quick comit before restructuring">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/View/InducteesTableModel.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/tutorial/Tutorial.java" afterPath="$PROJECT_DIR$/src/videoPlayer/VideoPlayer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new.png" afterPath="$PROJECT_DIR$/new.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/Model/Inductee.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/Model/Inductee.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/DatabasePersistor.java" afterPath="$PROJECT_DIR$/src/Controller/DatabasePersistor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/FilePersistor.java" afterPath="$PROJECT_DIR$/src/Controller/FilePersistor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Interfaces/IGui.java" afterPath="$PROJECT_DIR$/src/Controller/Interfaces/IGui.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Interfaces/IPersistor.java" afterPath="$PROJECT_DIR$/src/Controller/Interfaces/IPersistor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Interfaces/IPrinter.java" afterPath="$PROJECT_DIR$/src/Controller/Interfaces/IPrinter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/Interfaces/IScanner.java" afterPath="$PROJECT_DIR$/src/Controller/Interfaces/IScanner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/ChoiceQuestion.java" afterPath="$PROJECT_DIR$/src/Model/ChoiceQuestion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/ImageChoiceQuestion.java" afterPath="$PROJECT_DIR$/src/Model/ImageChoiceQuestion.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Inductee.java" afterPath="$PROJECT_DIR$/src/Model/Inductee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Question.java" afterPath="$PROJECT_DIR$/src/Model/Question.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Questionnaire.java" afterPath="$PROJECT_DIR$/src/Model/Questionnaire.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/BackEndFrame.java" afterPath="$PROJECT_DIR$/src/View/BackEndFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/ImagePanel.java" afterPath="$PROJECT_DIR$/src/View/ImagePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/JPanelOpenCV.java" afterPath="$PROJECT_DIR$/src/View/JPanelOpenCV.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/MainApplication.java" afterPath="$PROJECT_DIR$/src/View/MainApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/QuestionPanel.java" afterPath="$PROJECT_DIR$/src/View/QuestionPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/QuizFrame.java" afterPath="$PROJECT_DIR$/src/View/QuizFrame.java" />
     </list>
     <ignored path="Induction-SW.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,26 +24,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="FilePersistor.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FilePersistor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/FilePersistor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.195122">
-              <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Inductee.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/Inductee.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="114" column="33" selection-start-line="114" selection-start-column="33" selection-end-line="114" selection-end-column="33" />
-              <folding>
-                <element signature="e#3400#3401#0" expanded="true" />
-                <element signature="e#3448#3449#0" expanded="true" />
-                <element signature="e#3488#3489#0" expanded="true" />
-              </folding>
+              <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -112,18 +77,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataModel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/DataModel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
-              <folding>
-                <element signature="e#579#580#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UserInputFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/UserInputFrame.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -156,11 +109,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Questionnaire.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Questionnaire.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/model/Questionnaire.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="4.780488">
               <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Question.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Question.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -227,6 +190,7 @@
         <option value="$PROJECT_DIR$/src/model/DataModel.java" />
         <option value="$PROJECT_DIR$/src/view/DisplayInducteesFrame.java" />
         <option value="$PROJECT_DIR$/src/view/UserInputFrame.java" />
+        <option value="$PROJECT_DIR$/src/controller/FilePersistor.java" />
       </list>
     </option>
   </component>
@@ -796,7 +760,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1452" height="912" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -805,7 +769,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971016" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32777777" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32777777" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17173913" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1114,21 +1078,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Question.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding>
-            <element signature="e#1283#1284#0" expanded="false" />
-            <element signature="e#1310#1311#0" expanded="false" />
-            <element signature="e#1339#1340#0" expanded="false" />
-            <element signature="e#1367#1368#0" expanded="false" />
-            <element signature="e#1406#1407#0" expanded="false" />
-            <element signature="e#1440#1441#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/ImageChoiceQuestion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1161,14 +1110,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Questionnaire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1222,7 +1163,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="27" column="61" selection-start-line="27" selection-start-column="61" selection-end-line="27" selection-end-column="61" />
           <folding>
-            <element signature="e#579#580#0" expanded="true" />
+            <element signature="e#579#580#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1260,8 +1201,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/FilePersistor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.195122">
-          <caret line="48" column="0" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Question.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="116" column="5" selection-start-line="116" selection-start-column="5" selection-end-line="116" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Questionnaire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.780488">
+          <caret line="105" column="0" selection-start-line="105" selection-start-column="0" selection-end-line="105" selection-end-column="0" />
           <folding />
         </state>
       </provider>
