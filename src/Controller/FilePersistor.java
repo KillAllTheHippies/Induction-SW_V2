@@ -25,6 +25,7 @@ public class FilePersistor implements IPersistor{
             oos.writeObject(dm);
             oos.close();
             fos.close();
+            System.out.println("Datamodel written");
         }
         catch(IOException ioex)
         {
@@ -46,7 +47,7 @@ public class FilePersistor implements IPersistor{
             ObjectInputStream ois = new ObjectInputStream(fis);
             //We know that a DataModel object was serialized INTO
             //the file, therefore a DataModel object MUST be coming
-            //out of the file => We can cast it to a Country object.
+            //out of the file => We can cast it to a DataModel object.
             DataModel serializedObject = (DataModel) ois.readObject();
             ois.close();
             fis.close();

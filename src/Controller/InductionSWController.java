@@ -78,9 +78,9 @@ public class InductionSWController
 
     public Questionnaire getQuestionnaire(){ return this.questionnaire;}
 
-    public void setQuestionnaire(Questionnaire questionnaire) {
-        this.questionnaire = questionnaire;
-    }
+//    public void setQuestionnaire(Questionnaire questionnaire) {
+//        this.questionnaire = questionnaire;
+//    }
 
 
     public void setGuiReference(IGui gui)
@@ -159,9 +159,9 @@ public class InductionSWController
        Tutorial.main(null);
     }
 
-    public void saveDataModel()
-    {
-        FilePersistor fps = new FilePersistor();
-        fps.write(this.dataModel);
-    }
+//    public void saveDataModel()
+//    {
+//        FilePersistor fps = new FilePersistor();
+//        fps.write(this.dataModel);
+//    }
 }

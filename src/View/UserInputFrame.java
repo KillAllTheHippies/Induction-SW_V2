@@ -183,7 +183,8 @@ public class UserInputFrame extends JFrame {
 
             // ------------------CLOSE BUTTON------------------
             } else if (sourceButton.equals(closeButton)) {
-                InductionSWController.getInstance().saveDataModel();
+//                InductionSWController.getInstance().saveDataModel();
+                InductionSWController.getInstance().getPersistor().write(InductionSWController.getInstance().getDataModel());
                 dispose();
 
             // ------------------TAKE QUIZ BUTTON------------------
