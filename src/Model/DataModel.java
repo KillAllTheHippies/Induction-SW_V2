@@ -17,7 +17,15 @@ public class DataModel implements Serializable{
     }
 
     public void addInductee(Inductee i) {
+        /* Set the index to the position in the arraylist
+         that the inductee will be added to *************/
+        i.setIndex(inductees.size());
+
         inductees.add(i);
+    }
+
+    public Inductee getInductee(int index) {
+        return inductees.get(index);
     }
 
 

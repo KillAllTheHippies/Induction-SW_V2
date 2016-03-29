@@ -100,21 +100,7 @@ public class InductionSWController
         return this.persistor;
     }
 
-
-    //This method will be called by the VIEW layer and pass
-    //the information filled in in the Add Player dialog of the
-    //GUI.
-//	public void createPlayer(String name, int age,
-//									 int caps, int goalsScored)
-//	{
-//		Player p = new Player(name, age, caps, goalsScored);
-//		this.dataModel.addPlayer(p);
-//		//Inform the GUI that the data model has been updated.
-//		//This means the GUI will refresh itself.
-//		this.gui.refreshGUI();
-//	}
-
-    public void createInductee( String name, String company, String jobTitle, String supervisor, String carReg, String competencies, long dateOfInduction) {
+    public Inductee createInductee( String name, String company, String jobTitle, String supervisor, String carReg, String competencies, long dateOfInduction) {
         Inductee i = new Inductee( name, company, jobTitle, supervisor, carReg, competencies, dateOfInduction);
 
         // Capture the picture and add it to the inductee
@@ -127,7 +113,12 @@ public class InductionSWController
 
         // Add the inductee to the datamodel
         this.dataModel.addInductee(i);
+
+
         this.newlyAddedInductees.add(i);
+        return i;
+    }
+    public void takeQuiz(int inducteeIndex) {
 
     }
 
@@ -153,6 +144,8 @@ public class InductionSWController
 //        return this.getQuestionnaire().getAnswers()[ans - 1];
         return q.checkAnswer(ans);
     }
+
+
 
     public void launchVideo() {
        VideoPlayer.main(null);

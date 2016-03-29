@@ -18,6 +18,7 @@ import java.awt.image.BufferedImage;
 public class UserInputFrame extends JFrame {
 
     private JButton closeButton;
+    private JButton startButton;
     private JButton addUserButton;
     private JButton takeQuizButton;
     private JButton displayUsersButton;
@@ -114,12 +115,17 @@ public class UserInputFrame extends JFrame {
         // add button to panel, return panel.
         JPanel buttonPanel = new JPanel();
         closeButton = new JButton("Close");
+        startButton = new JButton("START");
         ButtonsActionListener buttonListener =
                 new ButtonsActionListener(this);
 
         closeButton.addActionListener(buttonListener);
+        startButton.addActionListener(buttonListener);
 
         buttonPanel.add(closeButton);
+        buttonPanel.add(Box.createHorizontalStrut(5));
+        buttonPanel.add(startButton);
+
 
         return buttonPanel;
     }
@@ -184,14 +190,32 @@ public class UserInputFrame extends JFrame {
 
             // ------------------CLOSE BUTTON------------------
             } else if (sourceButton.equals(closeButton)) {
-//                InductionSWController.getInstance().saveDataModel();
+
                 InductionSWController.getInstance().getPersistor().write
                         (InductionSWController.getInstance().getDataModel());
                 dispose();
 
+            }
+            // ------------------START BUTTON------------------
+            else if (sourceButton.equals(startButton)) {
+                /* Launch the quiz for now
+                    TODO: Launch the video instead
+                 */
+                Inductee i = InductionSWController.getInstance().
+                        createInductee(tfName.getText(),  tfCompany.getText(), tfJobTitle.getText(),
+                                tfSupervisor.getText(), tfCarReg.getText(), tfCompetencies.getText(),
+                                System.currentTimeMillis());
+                /* TODO: Launch the quiz frame modally */
+
+                QuizFrame qf = new QuizFrame("Quiz", outerClass);
+                qf.setSize(400,300);
+                // hide the frame
+                outerClass.setVisible(false);
+//                i.getIndex()
+            }
             // ------------------TAKE QUIZ BUTTON------------------
-            } else if (sourceButton.equals(takeQuizButton)) {
-                QuizFrame qf = new QuizFrame("Quiz");
+            else if (sourceButton.equals(takeQuizButton)) {
+                QuizFrame qf = new QuizFrame("Quiz", outerClass);
 
                 qf.setSize(400,300);
             }

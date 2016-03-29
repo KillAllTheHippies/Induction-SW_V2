@@ -23,13 +23,15 @@ public class QuizFrame extends JFrame{
     private ArrayList<JRadioButton> btnArray;
 //    private DataModel dataModel;
     private Questionnaire questionnaire;
+    private UserInputFrame parentFrame;
 
-    public QuizFrame(String title) throws HeadlessException {
+    public QuizFrame(String title, UserInputFrame parentFrame) throws HeadlessException {
         super(title);
         // Reference to the datamodel
 //        dataModel = InductionSWController.getInstance().getDataModel();
         btnArray = new ArrayList<>();
         questionnaire = new Questionnaire();
+        this.parentFrame = parentFrame;
 
         // Content of our JFrame
         JPanel mainPanel = new JPanel();
@@ -49,6 +51,7 @@ public class QuizFrame extends JFrame{
         this.add(mainPanel);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
     }
 
 //    private JPanel createQuestionPanel(MultipleChoiceQuestion questionnaire) {
@@ -194,9 +197,19 @@ public class QuizFrame extends JFrame{
                     // TODO: Launch a dialog which displays the score (modal)
                     System.out.println( "+++++++++++" + InductionSWController.getInstance().getQuestionnaire().getAnswers()[i] + "+++++++++++");
 
+
                     // Collect the answer
+
+
                 }
 
+                final JDialog frame = new JDialog(outerClass, "Score", true);
+//                    frame.getContentPane().add(panel);
+                frame.pack();
+                frame.setVisible(true);
+                // Enable the userinput frame and hide this one
+                outerClass.setVisible(false);
+                parentFrame.setVisible(true);
             }
             else {
 

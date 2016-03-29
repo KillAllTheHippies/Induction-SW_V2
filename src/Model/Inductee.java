@@ -1,12 +1,13 @@
 package model;
 
+import controller.InductionSWController;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -18,11 +19,14 @@ public class Inductee implements Serializable {
         private String competencies;
         private long dateOfInduction;
         transient BufferedImage photo;
+        private int[] quizAnswers;
+        private int index;
         private static long serialVersionUID = 6065412820542083316L;
 
         // transient ArrayList<BufferedImage> documents;
 
-    public Inductee(String name, String company, String jobTitle, String supervisor, String carReg,  String competencies, long dateOfInduction )
+    public Inductee(String name, String company, String jobTitle, String supervisor,
+                    String carReg,  String competencies, long dateOfInduction )
     {
         this.competencies = competencies;
         this.name = name;
@@ -31,6 +35,28 @@ public class Inductee implements Serializable {
         this.carReg = carReg;
         this.jobTitle = jobTitle;
         this.dateOfInduction = dateOfInduction;
+
+        /* Initialise the quiz results array to the size of the questionnaire */
+        this.quizAnswers = new int[InductionSWController.getInstance().getQuestionnaire().getQuestions().size()];
+    }
+
+    /**
+     * Record the answer
+     * @param answer
+     * @param index
+     */
+    public void addAnswer(int answer, int index) {
+
+        quizAnswers[index] = answer;
+    }
+
+    /**
+     * Retrieve an answer given its index
+     * @param index
+     * @return
+     */
+    public int getAnswer(int index) {
+        return quizAnswers[index];
     }
 
     private void writeObject(ObjectOutputStream out) throws IOException {
@@ -65,6 +91,14 @@ public class Inductee implements Serializable {
     /* *************<- GETTERS AND SETTERS ->************
     * ***************************************************
     * ***************************************************/
+
+    public int getIndex() {
+        return index;
+    }
+
+    public void setIndex(int index) {
+        this.index = index;
+    }
 
     public String getSupervisor() {
         return supervisor;
