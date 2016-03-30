@@ -43,11 +43,11 @@ public class Inductee implements Serializable {
     /**
      * Record the answer
      * @param answer
-     * @param index
+     * @param questionIndex
      */
-    public void addAnswer(int answer, int index) {
+    public void addAnswer(int answer, int questionIndex) {
 
-        quizAnswers[index] = answer;
+        this.quizAnswers[questionIndex] = answer;
     }
 
     /**
@@ -82,7 +82,7 @@ public class Inductee implements Serializable {
 
     @Override
     public String toString() {
-        return "name: " +name + "\n Supervisor: " +supervisor + "\n Company: " + company +
+        return "index: " + index + " name: " +name + "\n Supervisor: " +supervisor + "\n Company: " + company +
                 "\nJob Title: " + jobTitle + "\nVehicle Registration: " + carReg +
                 "\nCompetencies: " + competencies +
                 "\nDate of Induction: " + new Date(this.dateOfInduction);
@@ -91,6 +91,10 @@ public class Inductee implements Serializable {
     /* *************<- GETTERS AND SETTERS ->************
     * ***************************************************
     * ***************************************************/
+
+    public int[] getQuizAnswers() {
+        return quizAnswers;
+    }
 
     public int getIndex() {
         return index;

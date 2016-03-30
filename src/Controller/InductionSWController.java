@@ -40,6 +40,7 @@ public class InductionSWController
     //Reference to the data model
     private DataModel dataModel;
     private Questionnaire questionnaire;
+    private Inductee currentInductee;
     //private ArrayList<Inductee> dataModel;
 
     //Reference to the GUI
@@ -114,12 +115,33 @@ public class InductionSWController
         // Add the inductee to the datamodel
         this.dataModel.addInductee(i);
 
+        // Set the current inductee
+        this.currentInductee = i;
 
-        this.newlyAddedInductees.add(i);
+//        this.newlyAddedInductees.add(i);
         return i;
     }
+
+    public Inductee getCurrentInductee() {
+        return currentInductee;
+    }
+    public void setCurrentInductee(Inductee i) {
+        this.currentInductee = i;
+    }
+
     public void takeQuiz(int inducteeIndex) {
 
+    }
+
+    public int calculateQuizScore(Inductee i) {
+
+        int amountCorrect = 0;
+        for (int j = 0; j < questionnaire.getQuestions().size(); j++) {
+            if (checkAnswer(questionnaire.getQuestions().get(j), i.getAnswer(j)))
+                amountCorrect++;
+
+        }
+        return amountCorrect;
     }
 
     public BufferedImage takePicture() throws InterruptedException {
@@ -140,8 +162,6 @@ public class InductionSWController
 
     public boolean checkAnswer(MultipleChoiceQuestion q, int ans) {
         // Check the answer given the question and the answer
-
-//        return this.getQuestionnaire().getAnswers()[ans - 1];
         return q.checkAnswer(ans);
     }
 

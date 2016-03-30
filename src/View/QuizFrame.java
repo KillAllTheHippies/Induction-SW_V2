@@ -194,7 +194,7 @@ public class QuizFrame extends JFrame{
                     MultipleChoiceQuestion quest = InductionSWController.getInstance().getQuestionnaire().getQuestions().get(i);
 
                     //output to the console
-                    // TODO: Launch a dialog which displays the score (modal)
+
                     System.out.println( "+++++++++++" + InductionSWController.getInstance().getQuestionnaire().getAnswers()[i] + "+++++++++++");
 
 
@@ -204,9 +204,15 @@ public class QuizFrame extends JFrame{
                 }
 
                 final JDialog frame = new JDialog(outerClass, "Score", true);
-//                    frame.getContentPane().add(panel);
+                JPanel panel = new JPanel();
+                JLabel label = new JLabel("Your Score was: " + InductionSWController.getInstance().calculateQuizScore
+                        (InductionSWController.getInstance().getCurrentInductee()) + " out of " +
+                InductionSWController.getInstance().getQuestionnaire().getQuestions().size());
+                panel.add(label);
+                frame.getContentPane().add(panel);
                 frame.pack();
                 frame.setVisible(true);
+
                 // Enable the userinput frame and hide this one
                 outerClass.setVisible(false);
                 parentFrame.setVisible(true);

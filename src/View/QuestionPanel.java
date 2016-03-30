@@ -1,6 +1,7 @@
 package view;
 
 import controller.InductionSWController;
+import model.Inductee;
 import model.MultipleChoiceQuestion;
 
 import javax.swing.*;
@@ -21,6 +22,7 @@ public class QuestionPanel extends JPanel {
     private JRadioButton btn1,btn2,btn3,btn4;
     private ArrayList<JRadioButton> btnArray = new ArrayList<>();
     private BufferedImage im;
+
 //    private DataModel dataModel;
 
     public QuestionPanel(MultipleChoiceQuestion q) {
@@ -144,30 +146,49 @@ public class QuestionPanel extends JPanel {
 
             // ------------------BTN1------------------
             if (sourceButton.equals(btn1)) {
-                System.out.println(InductionSWController.getInstance().checkAnswer(q, 0));
+                System.out.println("Q: " + q.getIndex() + " " +  InductionSWController.getInstance().checkAnswer(q, 0));
                 // Add the answer selected to the position in the array of answers
                 InductionSWController.getInstance().getQuestionnaire().addAnswer
                         (InductionSWController.getInstance().checkAnswer(q, 0), q.getIndex());
+                Inductee i = InductionSWController.getInstance().getCurrentInductee();
+                i.addAnswer(0, q.getIndex());
+                InductionSWController.getInstance().setCurrentInductee(i);
+//                InductionSWController.getInstance().getCurrentInductee().addAnswer(0, q.getIndex());
 
                 // ------------------BTN2------------------
             } else if (sourceButton.equals(btn2)) {
-                System.out.println(InductionSWController.getInstance().checkAnswer(q, 1));
+                System.out.println("Q: " + q.getIndex() + " " + InductionSWController.getInstance().checkAnswer(q, 1));
                 // Add the answer selected to the position in the arraylist of answers
                 InductionSWController.getInstance().getQuestionnaire().addAnswer
                         (InductionSWController.getInstance().checkAnswer(q, 1), q.getIndex() );
+//                InductionSWController.getInstance().getCurrentInductee().addAnswer(1, q.getIndex());
+                Inductee i = InductionSWController.getInstance().getCurrentInductee();
+                i.addAnswer(1, q.getIndex());
+                InductionSWController.getInstance().setCurrentInductee(i);
 
                 // ------------------BTN3------------------
             } else if (sourceButton.equals(btn3)) {
-                System.out.println(InductionSWController.getInstance().checkAnswer(q, 2));
+                System.out.println("Q: " + q.getIndex() + " " + InductionSWController.getInstance().checkAnswer(q, 2));
                 // Add the answer selected to the position in the arraylist of answers
-                InductionSWController.getInstance().getQuestionnaire().addAnswer(InductionSWController.getInstance().checkAnswer(q, 2), q.getIndex() );
+                InductionSWController.getInstance().getQuestionnaire().addAnswer
+                        (InductionSWController.getInstance().checkAnswer(q, 2), q.getIndex() );
+                Inductee i = InductionSWController.getInstance().getCurrentInductee();
+                i.addAnswer(2, q.getIndex());
+                InductionSWController.getInstance().setCurrentInductee(i);
+//                InductionSWController.getInstance().getCurrentInductee().addAnswer(2, q.getIndex());
             }
 
             // ------------------BTN4------------------
             else {
-                System.out.println(InductionSWController.getInstance().checkAnswer(q, 3));
+                System.out.println("Q: " + q.getIndex() + " " + InductionSWController.getInstance().checkAnswer(q, 3));
                 // Add the answer selected to the position in the arraylist of answers
-                InductionSWController.getInstance().getQuestionnaire().addAnswer(InductionSWController.getInstance().checkAnswer(q, 3), q.getIndex() );
+                InductionSWController.getInstance().getQuestionnaire().addAnswer
+                        (InductionSWController.getInstance().checkAnswer(q, 3), q.getIndex() );
+
+                Inductee i = InductionSWController.getInstance().getCurrentInductee();
+                i.addAnswer(3, q.getIndex());
+                InductionSWController.getInstance().setCurrentInductee(i);
+
                 }
 
             } // end else

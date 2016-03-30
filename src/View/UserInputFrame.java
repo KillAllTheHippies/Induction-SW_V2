@@ -205,7 +205,7 @@ public class UserInputFrame extends JFrame {
                         createInductee(tfName.getText(),  tfCompany.getText(), tfJobTitle.getText(),
                                 tfSupervisor.getText(), tfCarReg.getText(), tfCompetencies.getText(),
                                 System.currentTimeMillis());
-                /* TODO: Launch the quiz frame modally */
+                InductionSWController.getInstance().setCurrentInductee(i);
 
                 QuizFrame qf = new QuizFrame("Quiz", outerClass);
                 qf.setSize(400,300);
