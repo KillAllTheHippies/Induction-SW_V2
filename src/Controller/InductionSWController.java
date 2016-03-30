@@ -133,16 +133,7 @@ public class InductionSWController
 
     }
 
-    public int calculateQuizScore(Inductee i) {
 
-        int amountCorrect = 0;
-        for (int j = 0; j < questionnaire.getQuestions().size(); j++) {
-            if (checkAnswer(questionnaire.getQuestions().get(j), i.getAnswer(j)))
-                amountCorrect++;
-
-        }
-        return amountCorrect;
-    }
 
     public BufferedImage takePicture() throws InterruptedException {
 
@@ -163,6 +154,21 @@ public class InductionSWController
     public boolean checkAnswer(MultipleChoiceQuestion q, int ans) {
         // Check the answer given the question and the answer
         return q.checkAnswer(ans);
+    }
+
+    public int calculateQuizScore(Inductee i) {
+
+        int amountCorrect = 0;
+        for (int j = 0; j < this.questionnaire.getQuestions().size(); j++) {
+            if (checkAnswer(questionnaire.getQuestions().get(j), i.getAnswer(j))) {
+                amountCorrect++;
+                System.out.println("Correct Answer: " + j);
+                System.out.println("amountCorrect = " + amountCorrect);
+
+            }
+
+        }
+        return amountCorrect;
     }
 
 

@@ -202,6 +202,9 @@ public class QuizFrame extends JFrame{
 
 
                 }
+                for (int i = 0 ; i < InductionSWController.getInstance().getQuestionnaire().getQuestions().size(); i++) {
+                    System.out.println(InductionSWController.getInstance().getCurrentInductee().getQuizAnswers()[i]);
+                }
 
                 final JDialog frame = new JDialog(outerClass, "Score", true);
                 JPanel panel = new JPanel();
@@ -214,8 +217,8 @@ public class QuizFrame extends JFrame{
                 frame.setVisible(true);
 
                 // Enable the userinput frame and hide this one
-                outerClass.setVisible(false);
-                parentFrame.setVisible(true);
+//                outerClass.setVisible(false);
+//                parentFrame.setVisible(true);
             }
             else {
 

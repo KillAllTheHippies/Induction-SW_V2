@@ -210,7 +210,7 @@ public class UserInputFrame extends JFrame {
                 QuizFrame qf = new QuizFrame("Quiz", outerClass);
                 qf.setSize(400,300);
                 // hide the frame
-                outerClass.setVisible(false);
+//                outerClass.setVisible(false);
 //                i.getIndex()
             }
             // ------------------TAKE QUIZ BUTTON------------------
