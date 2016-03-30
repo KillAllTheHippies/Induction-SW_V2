@@ -55,7 +55,7 @@ public class QuestionPanel extends JPanel {
         //JPanel qp = createQuestionPanel(q);
 
         // Create the label
-        JLabel lblQuestion = new JLabel(q.getText());
+        JLabel lblQuestion = new JLabel("Question " + (q.getIndex() + 1) + ".\n" +q.getText());
         this.add(lblQuestion);
 
 

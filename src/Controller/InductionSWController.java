@@ -35,8 +35,6 @@ public class InductionSWController
 
     /////EVERYTHING BELOW THIS IS THE "INSTANCE PART"
 
-    private ArrayList<Inductee> newlyAddedInductees;
-
     //Reference to the data model
     private DataModel dataModel;
     private Questionnaire questionnaire;
@@ -60,7 +58,7 @@ public class InductionSWController
     //method can call this now. Nobody outside this class
     //can create an instance of it.
     private InductionSWController() {
-        this.newlyAddedInductees = new ArrayList<Inductee>();
+
         this.questionnaire = new Questionnaire();
     }
 
@@ -160,10 +158,12 @@ public class InductionSWController
 
         int amountCorrect = 0;
         for (int j = 0; j < this.questionnaire.getQuestions().size(); j++) {
-            if (checkAnswer(questionnaire.getQuestions().get(j), i.getAnswer(j))) {
+            if (checkAnswer(this.questionnaire.getQuestions().get(j), i.getAnswer(j))) {
                 amountCorrect++;
-                System.out.println("Correct Answer: " + j);
-                System.out.println("amountCorrect = " + amountCorrect);
+
+                //Test code
+//                System.out.println("Correct Answer: " + j);
+//                System.out.println("amountCorrect = " + amountCorrect);
 
             }
 
