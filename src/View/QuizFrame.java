@@ -30,7 +30,7 @@ public class QuizFrame extends JFrame{
         // Reference to the datamodel
 //        dataModel = InductionSWController.getInstance().getDataModel();
         btnArray = new ArrayList<>();
-        questionnaire = new Questionnaire();
+        questionnaire = InductionSWController.getInstance().getQuestionnaire();
         this.parentFrame = parentFrame;
 
         // Content of our JFrame

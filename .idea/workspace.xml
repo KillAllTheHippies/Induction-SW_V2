@@ -3,17 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1e4796d8-3638-437e-be61-cca90543abd0" name="Default" comment="Quick comit before restructuring">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new.png" afterPath="$PROJECT_DIR$/new.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/Controller/InductionSWController.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/Controller/InductionSWController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel$RadioButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel$RadioButtonsActionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/QuizFrame$ButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/QuizFrame$ButtonsActionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/QuizFrame.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/QuizFrame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/UserInputFrame$ButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/UserInputFrame$ButtonsActionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/InductionSWController.java" afterPath="$PROJECT_DIR$/src/Controller/InductionSWController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/QuestionPanel.java" afterPath="$PROJECT_DIR$/src/View/QuestionPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/QuizFrame.java" afterPath="$PROJECT_DIR$/src/View/QuizFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/UserInputFrame.java" afterPath="$PROJECT_DIR$/src/View/UserInputFrame.java" />
     </list>
     <ignored path="Induction-SW.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,8 +27,8 @@
       <file leaf-file-name="Questionnaire.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Questionnaire.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="120" column="24" selection-start-line="120" selection-start-column="24" selection-end-line="120" selection-end-column="24" />
+            <state relative-caret-position="0">
+              <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
               <folding>
                 <element signature="e#327#349#0" expanded="false" />
               </folding>
@@ -70,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InductionSWController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InductionSWController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/InductionSWController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="482">
@@ -121,11 +110,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuizFrame.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="QuizFrame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/QuizFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="438">
-              <caret line="221" column="13" selection-start-line="221" selection-start-column="13" selection-end-line="221" selection-end-column="13" />
+            <state relative-caret-position="151">
+              <caret line="32" column="78" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -199,8 +188,8 @@
         <option value="$PROJECT_DIR$/src/model/Inductee.java" />
         <option value="$PROJECT_DIR$/src/view/QuestionPanel.java" />
         <option value="$PROJECT_DIR$/src/view/UserInputFrame.java" />
-        <option value="$PROJECT_DIR$/src/view/QuizFrame.java" />
         <option value="$PROJECT_DIR$/src/controller/InductionSWController.java" />
+        <option value="$PROJECT_DIR$/src/view/QuizFrame.java" />
       </list>
     </option>
   </component>
@@ -729,7 +718,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1458" height="918" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -744,18 +733,18 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15028901" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3264177" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39722222" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39695713" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32777777" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -771,7 +760,15 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="33" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/model/Questionnaire.java</url>
+          <line>113</line>
+          <properties />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="35" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1088,16 +1085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Questionnaire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="120" column="24" selection-start-line="120" selection-start-column="24" selection-end-line="120" selection-end-column="24" />
-          <folding>
-            <element signature="e#327#349#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/MultipleChoiceQuestion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="214">
@@ -1139,14 +1126,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/QuizFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="221" column="13" selection-start-line="221" selection-start-column="13" selection-end-line="221" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/QuestionPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1165,6 +1144,24 @@
           <folding>
             <element signature="e#2386#2451#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Questionnaire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <element signature="e#327#349#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/QuizFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="151">
+          <caret line="32" column="78" selection-start-line="32" selection-start-column="78" selection-end-line="32" selection-end-column="78" />
+          <folding />
         </state>
       </provider>
     </entry>
