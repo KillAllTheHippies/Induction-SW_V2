@@ -7,6 +7,8 @@ package controller;
         import model.*;
         import view.JPanelOpenCV;
         import videoPlayer.VideoPlayer;
+        import view.QuizFrame;
+        import view.UserInputFrame;
 
         import java.awt.image.BufferedImage;
         import java.util.ArrayList;
@@ -127,12 +129,6 @@ public class InductionSWController
         this.currentInductee = i;
     }
 
-    public void takeQuiz(int inducteeIndex) {
-
-    }
-
-
-
     public BufferedImage takePicture() throws InterruptedException {
 
         JPanelOpenCV jp = new JPanelOpenCV();
@@ -176,6 +172,7 @@ public class InductionSWController
     public void launchVideo() {
        VideoPlayer.main(null);
     }
+
 
 //    public void saveDataModel()
 //    {

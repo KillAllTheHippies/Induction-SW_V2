@@ -207,15 +207,16 @@ public class UserInputFrame extends JFrame {
                                 System.currentTimeMillis());
                 InductionSWController.getInstance().setCurrentInductee(i);
 
-                QuizFrame qf = new QuizFrame("Quiz", outerClass);
-                qf.setSize(400,300);
+                InductionSWController.getInstance().launchVideo();
+//                QuizFrame qf = new QuizFrame("Quiz", outerClass);
+//                qf.setSize(400,300);
                 // hide the frame
 //                outerClass.setVisible(false);
 //                i.getIndex()
             }
             // ------------------TAKE QUIZ BUTTON------------------
             else if (sourceButton.equals(takeQuizButton)) {
-                QuizFrame qf = new QuizFrame("Quiz", outerClass);
+                QuizFrame qf = new QuizFrame("Quiz");
 
                 qf.setSize(400,300);
             }

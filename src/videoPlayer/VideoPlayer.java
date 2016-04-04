@@ -12,10 +12,12 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
+import controller.InductionSWController;
 import uk.co.caprica.vlcj.component.EmbeddedMediaPlayerComponent;
 import uk.co.caprica.vlcj.discovery.NativeDiscovery;
 import uk.co.caprica.vlcj.player.MediaPlayer;
 import uk.co.caprica.vlcj.player.MediaPlayerEventAdapter;
+import view.QuizFrame;
 
 public class VideoPlayer {
 
@@ -27,7 +29,11 @@ public class VideoPlayer {
 
     private final JButton rewindButton;
 
-    private final JButton skipButton;
+    private final JButton forwardButton;
+
+    private final JButton playAgainButton;
+
+    private final JButton continueButton;
 
     public static void main(final String[] args) {
         new NativeDiscovery().discover();
@@ -43,6 +49,7 @@ public class VideoPlayer {
         frame = new JFrame("My First Media Player");
         frame.setBounds(100, 100, 600, 400);
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
+        frame.setUndecorated(true);
         frame.addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -63,8 +70,12 @@ public class VideoPlayer {
         controlsPane.add(pauseButton);
         rewindButton = new JButton("Rewind");
         controlsPane.add(rewindButton);
-        skipButton = new JButton("Skip");
-        controlsPane.add(skipButton);
+        forwardButton = new JButton("Forward");
+        controlsPane.add(forwardButton);
+        playAgainButton = new JButton("Play Again");
+        controlsPane.add(playAgainButton);
+        continueButton = new JButton("Continue to Questions");
+        controlsPane.add(continueButton);
         contentPane.add(controlsPane, BorderLayout.SOUTH);
 
         pauseButton.addActionListener(new ActionListener() {
@@ -77,14 +88,32 @@ public class VideoPlayer {
         rewindButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mediaPlayerComponent.getMediaPlayer().skip(-10000);
+                mediaPlayerComponent.getMediaPlayer().skip(-5000);
             }
         });
 
-        skipButton.addActionListener(new ActionListener() {
+        forwardButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mediaPlayerComponent.getMediaPlayer().skip(10000);
+                mediaPlayerComponent.getMediaPlayer().skip(5000);
+            }
+        });
+        playAgainButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                mediaPlayerComponent.getMediaPlayer().playMedia("C:\\Video4App\\videoviewdemo.mp4");
+            }
+        });
+        continueButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // launch the questionnaire GUI
+                QuizFrame qf = new QuizFrame("Induction Assessment");
+                qf.setSize(640,480);
+                qf.setExtendedState(JFrame.MAXIMIZED_BOTH); // Fullscreen
+
+//                InductionSWController.getInstance().lauchQuiz();
+                closeWindow();
             }
         });
 
@@ -95,9 +124,15 @@ public class VideoPlayer {
                     @Override
                     public void run() {
                         frame.setTitle(String.format(
-                                "My First Media Player - %s",
+                                "Induction Video - %s",
                                 mediaPlayerComponent.getMediaPlayer().getMediaMeta().getTitle()
                         ));
+                        // Show some buttons
+                        pauseButton.setVisible(true);
+                        rewindButton.setVisible(true);
+                        forwardButton.setVisible(true);
+                        playAgainButton.setVisible(false);
+
                     }
                 });
             }
@@ -107,7 +142,13 @@ public class VideoPlayer {
                 SwingUtilities.invokeLater(new Runnable() {
                     @Override
                     public void run() {
-                        closeWindow();
+                        // Hide some buttons
+                        pauseButton.setVisible(false);
+                        rewindButton.setVisible(false);
+                        forwardButton.setVisible(false);
+                        playAgainButton.setVisible(true);
+
+//                        closeWindow();
                     }
                 });
             }
@@ -130,9 +171,11 @@ public class VideoPlayer {
         });
 
         frame.setContentPane(contentPane);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setVisible(true);
 
-        mediaPlayerComponent.getMediaPlayer().playMedia("Video1.mp4");
+        mediaPlayerComponent.getMediaPlayer().playMedia("C:\\Video4App\\videoviewdemo.mp4");
+
     }
 
     private void closeWindow() {

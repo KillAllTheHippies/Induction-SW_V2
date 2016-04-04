@@ -23,15 +23,15 @@ public class QuizFrame extends JFrame{
     private ArrayList<JRadioButton> btnArray;
 //    private DataModel dataModel;
     private Questionnaire questionnaire;
-    private UserInputFrame parentFrame;
+//    private UserInputFrame parentFrame;
 
-    public QuizFrame(String title, UserInputFrame parentFrame) throws HeadlessException {
+    public QuizFrame(String title) throws HeadlessException {
         super(title);
         // Reference to the datamodel
 //        dataModel = InductionSWController.getInstance().getDataModel();
         btnArray = new ArrayList<>();
         questionnaire = InductionSWController.getInstance().getQuestionnaire();
-        this.parentFrame = parentFrame;
+//        this.parentFrame = parentFrame;
 
         // Content of our JFrame
         JPanel mainPanel = new JPanel();
