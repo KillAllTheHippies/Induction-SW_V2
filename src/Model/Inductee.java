@@ -22,7 +22,7 @@ public class Inductee implements Serializable {
         transient BufferedImage photo;
         private int[] quizAnswers;
         private int index; // index in the arrayList of inductees
-        // Collect the wrong answers in the format "Wrong_answer,Correct_answer,Question_index"
+        // Collect the wrong answers in the format "Wrong_answer|Correct_answer|Question_index"
         private ArrayList<String> wrongAnswers;
 
         private static long serialVersionUID = 6065412820542083316L;

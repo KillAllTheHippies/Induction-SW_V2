@@ -45,6 +45,9 @@ public class MultipleChoiceQuestion  implements Serializable
     }
 
 
+    public String getAnswerText(int answerIndex) {
+        return choices.get(answerIndex).getText();
+    }
     public String getText() {
         return text;
     }

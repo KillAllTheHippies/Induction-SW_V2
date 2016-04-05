@@ -150,20 +150,28 @@ public class InductionSWController
         return q.checkAnswer(ans);
     }
 
-    public int calculateQuizScore(Inductee i) {
+    public int calculateQuizScore(Inductee inductee) {
 
         int amountCorrect = 0;
-        for (int j = 0; j < this.questionnaire.getQuestions().size(); j++) {
-            if (checkAnswer(this.questionnaire.getQuestions().get(j), i.getAnswer(j))) {
+        ArrayList<String> wrongAnswers = new ArrayList<>();
+        for (int j = 0; j < questionnaire.getQuestions().size(); j++) {
+            if (checkAnswer(questionnaire.getQuestions().get(j), inductee.getAnswer(j))) {
                 amountCorrect++;
-
                 //Test code
 //                System.out.println("Correct Answer: " + j);
 //                System.out.println("amountCorrect = " + amountCorrect);
-
+            } else {
+                // get the text of the answer given by the inductee
+                wrongAnswers.add(""+questionnaire.getQuestions().get(j).getAnswerText(inductee.getAnswer(j))
+                        // Delimiter and correct answer
+                        +"|" +questionnaire.getCorrectAnswer(j) +
+                        // Delimiter and index of question
+                        "|" + (j));
             }
 
         }
+        // Assign the wrong answers to the current Inductee
+        currentInductee.setWrongAnswers(wrongAnswers);
         return amountCorrect;
     }
 

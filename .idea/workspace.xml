@@ -3,13 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="1e4796d8-3638-437e-be61-cca90543abd0" name="Default" comment="Quick comit before restructuring">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new.png" afterPath="$PROJECT_DIR$/new.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/Model/Inductee.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/Model/Inductee.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/Controller/InductionSWController.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/Controller/InductionSWController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/Model/Questionnaire.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/Model/Questionnaire.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel$RadioButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel$RadioButtonsActionListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/QuizFrame$ButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/QuizFrame$ButtonsActionListener.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/model/MultipleChoiceQuestion.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/model/MultipleChoiceQuestion.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/InductionSWController.java" afterPath="$PROJECT_DIR$/src/Controller/InductionSWController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Inductee.java" afterPath="$PROJECT_DIR$/src/Model/Inductee.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/MultipleChoiceQuestion.java" afterPath="$PROJECT_DIR$/src/Model/MultipleChoiceQuestion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Questionnaire.java" afterPath="$PROJECT_DIR$/src/Model/Questionnaire.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/QuizFrame.java" afterPath="$PROJECT_DIR$/src/View/QuizFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/view/QuestionPanel.java" afterPath="$PROJECT_DIR$/src/view/QuestionPanel.java" />
     </list>
     <ignored path="Induction-SW.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -34,7 +39,7 @@
       <file leaf-file-name="UserInputFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/UserInputFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4598">
+            <state relative-caret-position="0">
               <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
               <folding />
             </state>
@@ -44,43 +49,36 @@
       <file leaf-file-name="InductionSWController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/InductionSWController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="171" column="31" selection-start-line="171" selection-start-column="31" selection-end-line="171" selection-end-column="31" />
+            <state relative-caret-position="486">
+              <caret line="168" column="25" selection-start-line="168" selection-start-column="25" selection-end-line="168" selection-end-column="25" />
               <folding>
                 <element signature="e#2338#2403#0" expanded="false" />
-                <element signature="e#4886#4887#0" expanded="true" />
+                <element signature="method#createInductee#0;class#InductionSWController#0" expanded="false" />
+                <element signature="e#4669#4680#0" expanded="false" />
+                <element signature="e#5441#5442#0" expanded="true" />
+                <element signature="e#5478#5479#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VideoPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/videoPlayer/VideoPlayer.java">
+      <file leaf-file-name="Questionnaire.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/Questionnaire.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="51" column="35" selection-start-line="51" selection-start-column="35" selection-end-line="51" selection-end-column="35" />
+            <state relative-caret-position="205">
+              <caret line="153" column="38" selection-start-line="153" selection-start-column="38" selection-end-line="153" selection-end-column="38" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#1174#1175#0" expanded="false" />
-                <element signature="e#1223#1224#0" expanded="false" />
-                <element signature="e#2683#2684#0" expanded="false" />
-                <element signature="e#2760#2761#0" expanded="false" />
-                <element signature="e#2914#2915#0" expanded="false" />
-                <element signature="e#2995#2996#0" expanded="false" />
-                <element signature="e#3150#3151#0" expanded="false" />
-                <element signature="e#3230#3231#0" expanded="false" />
-                <element signature="e#6329#6330#0" expanded="false" />
-                <element signature="e#6416#6417#0" expanded="false" />
+                <element signature="e#327#349#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuizFrame.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="QuizFrame.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/QuizFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="176" column="89" selection-start-line="176" selection-start-column="89" selection-end-line="176" selection-end-column="89" />
+            <state relative-caret-position="1240">
+              <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -89,25 +87,11 @@
       <file leaf-file-name="Inductee.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/Inductee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-242">
-              <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
+            <state relative-caret-position="139">
+              <caret line="104" column="21" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
               <folding>
                 <element signature="e#3472#3473#0" expanded="true" />
                 <element signature="e#3507#3508#0" expanded="true" />
-                <element signature="e#3574#3575#0" expanded="true" />
-                <element signature="e#3622#3623#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuestionPanel.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/view/QuestionPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1606">
-              <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-              <folding>
-                <element signature="e#2845#2897#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -172,18 +156,18 @@
         <option value="$PROJECT_DIR$/src/controller/FilePersistor.java" />
         <option value="$PROJECT_DIR$/src/model/QChoice.java" />
         <option value="$PROJECT_DIR$/src/model/Question.java" />
-        <option value="$PROJECT_DIR$/src/model/MultipleChoiceQuestion.java" />
-        <option value="$PROJECT_DIR$/src/model/Questionnaire.java" />
         <option value="$PROJECT_DIR$/src/view/DisplayInducteesFrame.java" />
         <option value="$PROJECT_DIR$/src/view/MainApplication.java" />
         <option value="$PROJECT_DIR$/src/model/ImageChoiceQuestion.java" />
         <option value="$PROJECT_DIR$/src/model/DataModel.java" />
-        <option value="$PROJECT_DIR$/src/controller/InductionSWController.java" />
         <option value="$PROJECT_DIR$/src/view/UserInputFrame.java" />
         <option value="$PROJECT_DIR$/src/videoPlayer/VideoPlayer.java" />
-        <option value="$PROJECT_DIR$/src/model/Inductee.java" />
-        <option value="$PROJECT_DIR$/src/view/QuizFrame.java" />
         <option value="$PROJECT_DIR$/src/view/QuestionPanel.java" />
+        <option value="$PROJECT_DIR$/src/model/Inductee.java" />
+        <option value="$PROJECT_DIR$/src/model/MultipleChoiceQuestion.java" />
+        <option value="$PROJECT_DIR$/src/model/Questionnaire.java" />
+        <option value="$PROJECT_DIR$/src/controller/InductionSWController.java" />
+        <option value="$PROJECT_DIR$/src/view/QuizFrame.java" />
       </list>
     </option>
   </component>
@@ -230,7 +214,56 @@
     <panes>
       <pane id="Scratches" />
       <pane id="ProjectPane">
-        <subPane />
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Induction-SW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Induction-SW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Induction-SW_V2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Induction-SW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Induction-SW_V2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Induction-SW" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Induction-SW_V2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="model" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
       </pane>
       <pane id="PackagesPane" />
       <pane id="Scope" />
@@ -637,7 +670,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971016" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3208852" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35131398" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -696,15 +729,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/model/Questionnaire.java</url>
-          <line>113</line>
-          <properties />
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="35" />
+      <option name="time" value="37" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -748,7 +773,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#2338#2403#0" expanded="false" />
-            <element signature="e#4886#4887#0" expanded="true" />
+            <element signature="method#createInductee#0;class#InductionSWController#0" expanded="false" />
+            <element signature="e#4669#4680#0" expanded="false" />
+            <element signature="e#5441#5442#0" expanded="true" />
+            <element signature="e#5478#5479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -794,7 +822,10 @@
           <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
           <folding>
             <element signature="e#2338#2403#0" expanded="false" />
-            <element signature="e#4886#4887#0" expanded="true" />
+            <element signature="method#createInductee#0;class#InductionSWController#0" expanded="false" />
+            <element signature="e#4669#4680#0" expanded="false" />
+            <element signature="e#5441#5442#0" expanded="true" />
+            <element signature="e#5478#5479#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1002,17 +1033,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/MultipleChoiceQuestion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="40" column="25" selection-start-line="40" selection-start-column="25" selection-end-line="40" selection-end-column="25" />
-          <folding>
-            <element signature="e#701#702#0" expanded="false" />
-            <element signature="e#757#758#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/QChoice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
@@ -1020,23 +1040,6 @@
           <folding>
             <element signature="e#279#280#0" expanded="false" />
             <element signature="e#306#307#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Questionnaire.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#327#349#0" expanded="false" />
-            <element signature="e#4674#4675#0" expanded="false" />
-            <element signature="e#4706#4707#0" expanded="false" />
-            <element signature="e#4865#4866#0" expanded="false" />
-            <element signature="e#4897#4898#0" expanded="false" />
-            <element signature="e#4934#4935#0" expanded="false" />
-            <element signature="e#4964#4965#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1058,7 +1061,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/view/UserInputFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4598">
+        <state relative-caret-position="0">
           <caret line="219" column="0" selection-start-line="219" selection-start-column="0" selection-end-line="219" selection-end-column="0" />
           <folding />
         </state>
@@ -1084,38 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/InductionSWController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="171" column="31" selection-start-line="171" selection-start-column="31" selection-end-line="171" selection-end-column="31" />
-          <folding>
-            <element signature="e#2338#2403#0" expanded="false" />
-            <element signature="e#4886#4887#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/Inductee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-242">
-          <caret line="27" column="68" selection-start-line="27" selection-start-column="68" selection-end-line="27" selection-end-column="68" />
-          <folding>
-            <element signature="e#3472#3473#0" expanded="true" />
-            <element signature="e#3507#3508#0" expanded="true" />
-            <element signature="e#3574#3575#0" expanded="true" />
-            <element signature="e#3622#3623#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/QuizFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="176" column="89" selection-start-line="176" selection-start-column="89" selection-end-line="176" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/QuestionPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1606">
@@ -1123,6 +1094,62 @@
           <folding>
             <element signature="e#2845#2897#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/MultipleChoiceQuestion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
+          <folding>
+            <element signature="e#701#702#0" expanded="true" />
+            <element signature="e#757#758#0" expanded="true" />
+            <element signature="e#810#811#0" expanded="true" />
+            <element signature="e#867#868#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Questionnaire.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="153" column="38" selection-start-line="153" selection-start-column="38" selection-end-line="153" selection-end-column="38" />
+          <folding>
+            <element signature="e#327#349#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/Inductee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="139">
+          <caret line="104" column="21" selection-start-line="104" selection-start-column="21" selection-end-line="104" selection-end-column="21" />
+          <folding>
+            <element signature="e#3472#3473#0" expanded="true" />
+            <element signature="e#3507#3508#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/InductionSWController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="168" column="25" selection-start-line="168" selection-start-column="25" selection-end-line="168" selection-end-column="25" />
+          <folding>
+            <element signature="e#2338#2403#0" expanded="false" />
+            <element signature="method#createInductee#0;class#InductionSWController#0" expanded="false" />
+            <element signature="e#4669#4680#0" expanded="false" />
+            <element signature="e#5441#5442#0" expanded="true" />
+            <element signature="e#5478#5479#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/QuizFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1240">
+          <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

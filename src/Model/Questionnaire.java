@@ -104,20 +104,20 @@ public class Questionnaire {
             while((s = in.readLine()) != null){
 
                 String[] var = s.split("="); // use = as our delimiter
-                MultipleChoiceQuestion q = new MultipleChoiceQuestion(var[0]);
-                q.addChoice(var[1], true);
-                q.addChoice(var[2], false);
-                q.addChoice(var[3], false);
-                q.addChoice(var[4], false);
+                MultipleChoiceQuestion question = new MultipleChoiceQuestion(var[0]);
+                question.addChoice(var[1], true);
+                question.addChoice(var[2], false);
+                question.addChoice(var[3], false);
+                question.addChoice(var[4], false);
 
                 /* Shuffle the choices */
-                ArrayList<QChoice> tempChoices = q.getChoices();
+                ArrayList<QChoice> tempChoices = question.getChoices();
                 Collections.shuffle(tempChoices);
-                q.setChoices(tempChoices);
+                question.setChoices(tempChoices);
 
                 // Set the index of the question.
-                q.setIndex(index);
-                questions.add(q);
+                question.setIndex(index);
+                questions.add(question);
                 index++;
 
             }
@@ -148,5 +148,15 @@ public class Questionnaire {
 
     public boolean[] getAnswers() {
         return answers;
+    }
+
+    public String getCorrectAnswer(int index) {
+        for (int i = 0 ; i < 4; i++) {
+            if (questions.get(index).getChoices().get(i).isCorrect()) {
+                return questions.get(index).getChoices().get(i).getText();
+            }
+
+        }
+        return "The code should not execute this";
     }
 }
