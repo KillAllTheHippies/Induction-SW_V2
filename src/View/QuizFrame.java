@@ -170,10 +170,14 @@ public class QuizFrame extends JFrame{
 
                 final JDialog frame = new JDialog(outerClass, "Score", true);
                 JPanel panel = new JPanel();
-                JLabel label = new JLabel("Your Score was: " + InductionSWController.getInstance().calculateQuizScore
+                JLabel scoreLabel = new JLabel("Your Score was: " + InductionSWController.getInstance().calculateQuizScore
                         (InductionSWController.getInstance().getCurrentInductee()) + " out of " +
                 InductionSWController.getInstance().getQuestionnaire().getQuestions().size());
-                panel.add(label);
+                JLabel wrongLabel = new JLabel("Your Score was: " +InductionSWController.getInstance().calculateQuizScore
+                        (InductionSWController.getInstance().getCurrentInductee()) + " \nout of " +
+                        InductionSWController.getInstance().getQuestionnaire().getQuestions().size());
+                panel.add(scoreLabel);
+                panel.add(wrongLabel);
                 frame.getContentPane().add(panel);
                 frame.pack();
                 frame.setVisible(true);

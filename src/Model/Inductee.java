@@ -8,6 +8,7 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Date;
 
 /**
@@ -20,7 +21,10 @@ public class Inductee implements Serializable {
         private long dateOfInduction;
         transient BufferedImage photo;
         private int[] quizAnswers;
-        private int index;
+        private int index; // index in the arrayList of inductees
+        // Collect the wrong answers in the format "Wrong_answer,Correct_answer,Question_index"
+        private ArrayList<String> wrongAnswers;
+
         private static long serialVersionUID = 6065412820542083316L;
 
         // transient ArrayList<BufferedImage> documents;
@@ -38,6 +42,8 @@ public class Inductee implements Serializable {
 
         /* Initialise the quiz results array to the size of the questionnaire */
         this.quizAnswers = new int[InductionSWController.getInstance().getQuestionnaire().getQuestions().size()];
+        /* Initialise the wrong answers arraylist */
+        this.wrongAnswers = new ArrayList<String>();
     }
 
     /**
@@ -91,6 +97,14 @@ public class Inductee implements Serializable {
     /* *************<- GETTERS AND SETTERS ->************
     * ***************************************************
     * ***************************************************/
+
+    public ArrayList<String> getWrongAnswers() {
+        return wrongAnswers;
+    }
+
+    public void setWrongAnswers(ArrayList<String> wrongAnswers) {
+        this.wrongAnswers = wrongAnswers;
+    }
 
     public int[] getQuizAnswers() {
         return quizAnswers;

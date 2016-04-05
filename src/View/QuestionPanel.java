@@ -6,6 +6,7 @@ import model.MultipleChoiceQuestion;
 
 import javax.swing.*;
 import javax.swing.border.BevelBorder;
+import javax.swing.border.EtchedBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -77,9 +78,11 @@ public class QuestionPanel extends JPanel {
             this.add(btn);
         }
 
-        // Add a border to the panel
-        this.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10), BorderFactory.createEtchedBorder()));
-//        this.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
+        // Add a border to the panel (padding)
+        this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+
+
+
     }
 
     /**
