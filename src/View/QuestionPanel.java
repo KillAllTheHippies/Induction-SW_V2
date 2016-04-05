@@ -5,6 +5,7 @@ import model.Inductee;
 import model.MultipleChoiceQuestion;
 
 import javax.swing.*;
+import javax.swing.border.BevelBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -30,11 +31,13 @@ public class QuestionPanel extends JPanel {
         this.q = q;
         this.currentInductee = InductionSWController.getInstance().getCurrentInductee();
 //        this.dataModel = InductionSWController.getInstance().getDataModel();
-        this.setLayout(new FlowLayout(FlowLayout.LEFT));
+//        this.setLayout(new FlowLayout(FlowLayout.LEFT));
+        this.setLayout(new GridLayout(0,1));
         btn1 = new JRadioButton();
         btn2 = new JRadioButton();
         btn3 = new JRadioButton();
         btn4 = new JRadioButton();
+
 
         RadioButtonsActionListener rdbListener = new RadioButtonsActionListener(this);
         btn1.addActionListener(rdbListener);
@@ -54,8 +57,12 @@ public class QuestionPanel extends JPanel {
         btnGroup.add(btn4);
         //JPanel qp = createQuestionPanel(q);
 
-        // Create the label
-        JLabel lblQuestion = new JLabel("Question " + (q.getIndex() + 1) + ".\n" +q.getText());
+        // Create the labels
+        JLabel lblQuestionNum = new JLabel("Question " + (q.getIndex() + 1) + ".\n");
+        JLabel lblQuestion = new JLabel(q.getText());
+        Font labelFont = lblQuestion.getFont();
+        lblQuestion.setFont(new Font(labelFont.getName(), Font.PLAIN, 15));
+        this.add(lblQuestionNum);
         this.add(lblQuestion);
 
 
@@ -65,10 +72,14 @@ public class QuestionPanel extends JPanel {
             String s = q.getChoices().get(i).getText();
             JRadioButton btn = btnArray.get(i);
             btn.setText(s);
+            btn.setFont(new Font(labelFont.getName(), Font.PLAIN, 15));
             btnGroup.add(btn);
             this.add(btn);
         }
 
+        // Add a border to the panel
+        this.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10), BorderFactory.createEtchedBorder()));
+//        this.setBorder(BorderFactory.createBevelBorder(BevelBorder.LOWERED));
     }
 
     /**

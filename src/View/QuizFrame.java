@@ -135,45 +135,7 @@ public class QuizFrame extends JFrame{
 
         return buttonPanel;
     }
-//
-//    private JPanel createSideButtonPanel() {
-//        // instantiate the buttons
-//        this.addUserButton = new JButton("Add User");
-//        this.displayUsersButton = new JButton("Display Users");
-//        this.updateButton = new JButton("Update User");
-//        this.showTweetsButton = new JButton("Show Tweets");
-//        this.addTweetButton = new JButton("Add Tweet");
-//
-//
-//        // Instantiate the listener for the buttons,
-//        // passing it in a reference to this class (TwitterFrame)
-//        // and assign it to the buttons
-//        ButtonsActionListener buttonListener = new ButtonsActionListener(this);
-//        addUserButton.addActionListener(buttonListener);
-//        displayUsersButton.addActionListener(buttonListener);
-//        showTweetsButton.addActionListener(buttonListener);
-//        updateButton.addActionListener(buttonListener);
-//        addTweetButton.addActionListener(buttonListener);
-//
-//        // Create panel, assign layout, add components.
-//        JPanel sideButtonPanel = new JPanel();
-//        sideButtonPanel.setLayout(new BoxLayout(sideButtonPanel, BoxLayout.Y_AXIS));
-//        sideButtonPanel.add(addUserButton);
-//        sideButtonPanel.add(Box.createVerticalStrut(5));
-//        sideButtonPanel.add(displayUsersButton);
-//        sideButtonPanel.add(Box.createVerticalStrut(5));
-//        sideButtonPanel.add(updateButton);
-//        sideButtonPanel.add(Box.createVerticalStrut(20));
-//        sideButtonPanel.add(addTweetButton);
-//        sideButtonPanel.add(Box.createVerticalStrut(5));
-//        sideButtonPanel.add(showTweetsButton);
-//
-//
-//        return sideButtonPanel;
-//    }
-//
-//
-    //Inner class implementation of ActionListener
+
     private class ButtonsActionListener implements ActionListener {
         //This is to allow this inner class to refer to its
         //containing class (i.e. UserInputFrame)
