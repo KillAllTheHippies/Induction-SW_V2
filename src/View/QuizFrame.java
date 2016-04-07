@@ -190,8 +190,11 @@ public class QuizFrame extends JFrame {
                         JLabel scoreLabel = new JLabel("Your Score was: " + quizScore + " out of " + quizSize +
                                 "(" + (quizScore * 100) / quizSize + "%)");
 
-                        JLabel wrongLabel = new JLabel("Your wrong answers. ");
+                        JLabel congratsLabel = new JLabel("Congratulations! You have passed your induction.");
+                        JLabel wrongLabel = new JLabel("Please pay attention to the questions that you answered incorrectly.");
+                        panel.add(congratsLabel);
                         panel.add(scoreLabel);
+                        if (quizScore < quizSize)
                         panel.add(wrongLabel);
                         panel.add(new JSeparator(JSeparator.HORIZONTAL));
 
@@ -202,10 +205,14 @@ public class QuizFrame extends JFrame {
                             String[] data = wrongAnswer.split("\\|");
 
                             panel.add(new JLabel("Question " + (Integer.parseInt(data[2]) + 1) + ":"));
+                            panel.add(new JLabel(InductionSWController.getInstance().getQuestionnaire()
+                                    .getQuestions().get(Integer.parseInt(data[2])).getText()));
                             panel.add(new JLabel("*************"));
                             panel.add(new JLabel("Your answer: " + data[0]));
                             panel.add(new JLabel("The Correct Answer was: " + data[1]));
                             panel.add(new JLabel("*************"));
+                            panel.add(new JSeparator(JSeparator.HORIZONTAL));
+
 
                         }
 
@@ -244,6 +251,8 @@ public class QuizFrame extends JFrame {
                             panel.add(new JLabel("Your answer: " + data[0]));
 //                            panel.add(new JLabel("The Correct Answer was: " + data[1]));
                             panel.add(new JLabel("*************"));
+                            panel.add(new JSeparator(JSeparator.HORIZONTAL));
+
 
                         }
                         JPanel bottomButtonPanel = new JPanel();

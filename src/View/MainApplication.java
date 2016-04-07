@@ -27,9 +27,10 @@ public class MainApplication {
         InductionSWController.getInstance().setDataModel(dataModel);
 
         // Create an instance of our main application frame which builds the UI
-        UserInputFrame uif = new UserInputFrame("Induction Application");
-        uif.setSize(700, 300);
-        uif.setVisible(true);
+//        UserInputFrame uif = new UserInputFrame("Induction Application");
+        MainDashBoardFrame dbf = new MainDashBoardFrame();
+        dbf.setSize(700, 300);
+        dbf.setVisible(true);
 
         // Connect the controller to the view
 //        TwitterController.getInstance().setGuiReference(uif);

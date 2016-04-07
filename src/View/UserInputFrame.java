@@ -207,6 +207,7 @@ public class UserInputFrame extends JFrame {
                 InductionSWController.getInstance().setCurrentInductee(i);
 
                 InductionSWController.getInstance().launchVideo();
+                dispose();
 //                QuizFrame qf = new QuizFrame("Quiz", outerClass);
 //                qf.setSize(400,300);
                 // hide the frame
