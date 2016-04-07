@@ -183,12 +183,12 @@ public class UserInputFrame extends JFrame {
 
             // ------------------ADD USER BUTTON------------------
             if (sourceButton.equals(addUserButton)) {
-                InductionSWController.getInstance().createInductee(tfName.getText(),  tfCompany.getText(),
+                InductionSWController.getInstance().createInductee(tfName.getText(), tfCompany.getText(),
                         tfJobTitle.getText(), tfSupervisor.getText(), tfCarReg.getText(),
                         tfCompetencies.getText(), System.currentTimeMillis());
                 System.out.println("user added");
 
-            // ------------------CLOSE BUTTON------------------
+                // ------------------CLOSE BUTTON------------------
             } else if (sourceButton.equals(closeButton)) {
 
                 InductionSWController.getInstance().getPersistor().write
@@ -198,11 +198,10 @@ public class UserInputFrame extends JFrame {
             }
             // ------------------START BUTTON------------------
             else if (sourceButton.equals(startButton)) {
-                /* Launch the quiz for now
-                    TODO: Launch the video instead
-                 */
+
+
                 Inductee i = InductionSWController.getInstance().
-                        createInductee(tfName.getText(),  tfCompany.getText(), tfJobTitle.getText(),
+                        createInductee(tfName.getText(), tfCompany.getText(), tfJobTitle.getText(),
                                 tfSupervisor.getText(), tfCarReg.getText(), tfCompetencies.getText(),
                                 System.currentTimeMillis());
                 InductionSWController.getInstance().setCurrentInductee(i);
@@ -218,12 +217,12 @@ public class UserInputFrame extends JFrame {
             else if (sourceButton.equals(takeQuizButton)) {
                 QuizFrame qf = new QuizFrame("Quiz");
 
-                qf.setSize(400,300);
+                qf.setSize(400, 300);
             }
             // ------------------Launch Backend BUTTON------------------
-             else if (sourceButton.equals(BackEndButton)) {
+            else if (sourceButton.equals(BackEndButton)) {
                 BackEndFrame bef = new BackEndFrame("Back End");
-                bef.setSize(400,300);
+                bef.setSize(400, 300);
                 bef.setVisible(true);
             }
             // ------------------DISPLAY VIDEO BUTTON------------------
@@ -241,7 +240,7 @@ public class UserInputFrame extends JFrame {
 //                }
 
                 DisplayInducteesFrame dif = new DisplayInducteesFrame("View Inductees");
-                dif.setSize(400,300);
+                dif.setSize(400, 300);
                 dif.setVisible(true);
 
             } // end else

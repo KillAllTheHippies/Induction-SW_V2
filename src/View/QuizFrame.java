@@ -2,7 +2,8 @@ package view;
 
 
 import controller.InductionSWController;
-import model.*;
+import model.MultipleChoiceQuestion;
+import model.Questionnaire;
 
 import javax.swing.*;
 import java.awt.*;
@@ -14,14 +15,14 @@ import java.util.ArrayList;
  * Created by Jamie on 07/03/16.
  * Frame that holds the Questionnaire
  */
-public class QuizFrame extends JFrame{
+public class QuizFrame extends JFrame {
 
     private JButton checkAnswerButton;
 
-//    private MultipleChoiceQuestion questionnaire;
+    //    private MultipleChoiceQuestion questionnaire;
     //private JRadioButton btn1,btn2,btn3,btn4;
     private ArrayList<JRadioButton> btnArray;
-//    private DataModel dataModel;
+    //    private DataModel dataModel;
     private Questionnaire questionnaire;
     private ArrayList<QuestionPanel> questionPanels;
 //    private UserInputFrame parentFrame;
@@ -101,28 +102,20 @@ public class QuizFrame extends JFrame{
 
     private JPanel createCenterPanel() {
 
-        JPanel mainPanel = new JPanel(new GridLayout(0,1));
+        JPanel mainPanel = new JPanel(new GridLayout(0, 1));
 
         for (MultipleChoiceQuestion quest : questionnaire.getQuestions()) {
-//            if (quest instanceof MultipleChoiceQuestion) {
+
             questionPanels.add(new QuestionPanel(quest));
-//                QuestionPanel qp = new QuestionPanel((MultipleChoiceQuestion) quest);
-                //sp.add(qp);
-//                mainPanel.add(qp);
-//                System.out.println(quest.getText());
-//            }
-//            else // else it is an ImageChoiceQuestion
-//            {
-//                QuestionPanel qp = new QuestionPanel((ImageChoiceQuestion) quest);
-//                //sp.add(qp);
-//                mainPanel.add(qp);
-//                System.out.println(quest.getText());
-//            }
 
         } // end for
-        for (QuestionPanel p : questionPanels) {
-            mainPanel.add(p);
-        }
+
+        /* Must get used to this foreach syntax. */
+        questionPanels.forEach(mainPanel::add);
+
+//        for (QuestionPanel p : questionPanels) {
+//            mainPanel.add(p);
+//        }
 
 
         return mainPanel;
@@ -184,55 +177,116 @@ public class QuizFrame extends JFrame{
 //                }
                 if (validateQuestionnaire()) {
 
-
-//                System.out.println("All questions answered: " + validateQuestionnaire());
                     int quizScore = InductionSWController.getInstance().calculateQuizScore
                             (InductionSWController.getInstance().getCurrentInductee());
                     int quizSize = InductionSWController.getInstance().getQuestionnaire().getQuestions().size();
 
                     final JDialog frame = new JDialog(outerClass, "Score", true);
-                    JPanel panel = new JPanel();
-                    panel.setLayout(new GridLayout(0, 1));
+                    // Calculate if pass or not, passing in percentage correct
+                    if (InductionSWController.getInstance().isQuizPassed((quizScore * 100) / quizSize)) {
+                        JPanel panel = new JPanel();
+                        panel.setLayout(new GridLayout(0, 1));
 
-                    JLabel scoreLabel = new JLabel("Your Score was: " + quizScore + " out of " + quizSize +
-                            "(" + (quizScore * 100) / quizSize + "%)");
+                        JLabel scoreLabel = new JLabel("Your Score was: " + quizScore + " out of " + quizSize +
+                                "(" + (quizScore * 100) / quizSize + "%)");
 
-                    JLabel wrongLabel = new JLabel("Your wrong answers. ");
-                    panel.add(scoreLabel);
-                    panel.add(wrongLabel);
-                    panel.add(new JSeparator(JSeparator.HORIZONTAL));
+                        JLabel wrongLabel = new JLabel("Your wrong answers. ");
+                        panel.add(scoreLabel);
+                        panel.add(wrongLabel);
+                        panel.add(new JSeparator(JSeparator.HORIZONTAL));
 
-                    for (String wrongAnswer : InductionSWController.getInstance().getCurrentInductee().getWrongAnswers()) {
+                        for (String wrongAnswer : InductionSWController.getInstance().getCurrentInductee().getWrongAnswers()) {
                     /* create a label with the wrong answer and add it to the panel
                      * wrongAnswer format: Wrong_answer|Correct_answer|Question_index
                      * Wrong answer = 0, correct answer = 1 question index = 2*/
-                        String[] data = wrongAnswer.split("\\|");
+                            String[] data = wrongAnswer.split("\\|");
 
-                        panel.add(new JLabel("Question " + (Integer.parseInt(data[2]) + 1) + ":"));
-                        panel.add(new JLabel("*************"));
-                        panel.add(new JLabel("Your answer: " + data[0]));
-                        panel.add(new JLabel("The Correct Answer was: " + data[1]));
-                        panel.add(new JLabel("*************"));
+                            panel.add(new JLabel("Question " + (Integer.parseInt(data[2]) + 1) + ":"));
+                            panel.add(new JLabel("*************"));
+                            panel.add(new JLabel("Your answer: " + data[0]));
+                            panel.add(new JLabel("The Correct Answer was: " + data[1]));
+                            panel.add(new JLabel("*************"));
 
-                    }
+                        }
 
 
-                    frame.getContentPane().add(panel);
-                    frame.pack();
-                    frame.setVisible(true);
+                        frame.getContentPane().add(panel);
+                        frame.pack();
+                        frame.setVisible(true);
 
-                    // Enable the userinput frame and hide this one
+
+                    } else { // Else Quiz is FAILED
+                        JPanel dialogPanel = new JPanel();
+                        dialogPanel.setLayout(new BorderLayout());
+                        JPanel panel = new JPanel();
+                        panel.setLayout(new GridLayout(0, 1));
+
+                        JLabel scoreLabel = new JLabel("Your Score was: " + quizScore + " out of " + quizSize +
+                                "(" + (quizScore * 100) / quizSize + "%)");
+                        JLabel passLabel = new JLabel("Unfortunately you have not passed. " +
+                                "Please watch the induction video again and attempt to answer " +
+                                InductionSWController.QUIZ_PASS_PERCENTAGE + "% correct.");
+
+                        JLabel wrongLabel = new JLabel("Your wrong answers. ");
+                        panel.add(scoreLabel);
+                        panel.add(passLabel);
+                        panel.add(wrongLabel);
+                        panel.add(new JSeparator(JSeparator.HORIZONTAL));
+
+                        for (String wrongAnswer : InductionSWController.getInstance().getCurrentInductee().getWrongAnswers()) {
+                    /* create a label with the wrong answer and add it to the panel
+                     * wrongAnswer format: Wrong_answer|Correct_answer|Question_index
+                     * Wrong answer = 0, correct answer = 1 question index = 2*/
+                            String[] data = wrongAnswer.split("\\|");
+
+                            panel.add(new JLabel("Question " + (Integer.parseInt(data[2]) + 1) + ":"));
+                            panel.add(new JLabel("*************"));
+                            panel.add(new JLabel("Your answer: " + data[0]));
+//                            panel.add(new JLabel("The Correct Answer was: " + data[1]));
+                            panel.add(new JLabel("*************"));
+
+                        }
+                        JPanel bottomButtonPanel = new JPanel();
+                        JButton reTakeQuizBtn = new JButton("Re-take Assessment");
+                        reTakeQuizBtn.addActionListener(new ButtonsActionListener(outerClass) {
+                            public void actionPerformed(ActionEvent e) {
+                                InductionSWController.getInstance().launchVideo();
+                                outerClass.dispose();
+                            }
+                        });
+
+
+                        JButton quitBtn = new JButton("Quit");
+                        quitBtn.addActionListener(new ButtonsActionListener(outerClass) {
+                            public void actionPerformed(ActionEvent e) {
+                               // TODO: return to main dashboard
+                                outerClass.dispose();
+                            }
+                        });
+
+                        bottomButtonPanel.add(reTakeQuizBtn);
+                        bottomButtonPanel.add(quitBtn);
+                        dialogPanel.add(bottomButtonPanel, BorderLayout.SOUTH);
+
+
+                        dialogPanel.add(panel, BorderLayout.CENTER);
+                        frame.getContentPane().add(dialogPanel);
+                        frame.pack();
+                        frame.setVisible(true);
+
+                        // Enable the userinput frame and hide this one
 //                outerClass.setVisible(false);
 //                parentFrame.setVisible(true);
-                } else {
-                    JOptionPane.showMessageDialog (null, "You need to answer all questions", "Error", JOptionPane.ERROR_MESSAGE);
-                    
-                } // else radiobutton group not selected
+                    }
+                } else { // ELSE QUESTIONNAIRE NOT VALIDATED
+                    JOptionPane.showMessageDialog(null, "You need to answer all questions", "Error", JOptionPane.ERROR_MESSAGE);
+
                 }
+            }
 
-            } // end else
+        }
 
-        }// end actionperformed
-//
     }
+
+}
 

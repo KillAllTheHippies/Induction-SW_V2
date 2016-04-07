@@ -41,6 +41,7 @@ public class InductionSWController
     private DataModel dataModel;
     private Questionnaire questionnaire;
     private Inductee currentInductee;
+    public static final int QUIZ_PASS_PERCENTAGE = 70;
     //private ArrayList<Inductee> dataModel;
 
     //Reference to the GUI
@@ -148,6 +149,14 @@ public class InductionSWController
     public boolean checkAnswer(MultipleChoiceQuestion q, int ans) {
         // Check the answer given the question and the answer
         return q.checkAnswer(ans);
+    }
+
+    public boolean isQuizPassed(int percentageCorrect) {
+        if (percentageCorrect < QUIZ_PASS_PERCENTAGE)
+            return false;
+        else
+            return true;
+
     }
 
     public int calculateQuizScore(Inductee inductee) {
