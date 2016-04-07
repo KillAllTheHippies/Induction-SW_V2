@@ -11,7 +11,7 @@ import java.awt.event.ActionListener;
 /**
  * Created by Jamie on 07/04/16.
  */
-public class MainDashBoardFrame extends JFrame{
+public class MainDashBoardFrame extends JFrame {
 
     public MainDashBoardFrame() throws HeadlessException {
         /* DEFAULT CONSTRUCTOR */
@@ -21,6 +21,7 @@ public class MainDashBoardFrame extends JFrame{
 
         // add to the layout
         this.add(mainPanel);
+        this.setSize(300,300);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
@@ -29,7 +30,7 @@ public class MainDashBoardFrame extends JFrame{
     private JPanel createCenterPanel() {
         JPanel centerPanel = new JPanel();
         centerPanel.setLayout(new GridLayout(0,1));
-        JButton beginInductionBtn = new JButton("Begin Induction");
+        JButton beginInductionBtn = new JButton("Click here to begin induction");
 //        beginInductionBtn.setBorder(new EmptyBorder(100,100,100,100));
         beginInductionBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {

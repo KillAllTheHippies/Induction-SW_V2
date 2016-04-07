@@ -182,8 +182,11 @@ public class QuizFrame extends JFrame {
                     int quizSize = InductionSWController.getInstance().getQuestionnaire().getQuestions().size();
 
                     final JDialog frame = new JDialog(outerClass, "Score", true);
-                    // Calculate if pass or not, passing in percentage correct
+
+                    // IF QUIZ IS PASSED
                     if (InductionSWController.getInstance().isQuizPassed((quizScore * 100) / quizSize)) {
+                        JPanel passedPanel = new JPanel();
+                        passedPanel.setLayout(new BorderLayout());
                         JPanel panel = new JPanel();
                         panel.setLayout(new GridLayout(0, 1));
 
@@ -196,6 +199,7 @@ public class QuizFrame extends JFrame {
                         panel.add(scoreLabel);
                         if (quizScore < quizSize)
                         panel.add(wrongLabel);
+                        panel.add(Box.createVerticalStrut(5));
                         panel.add(new JSeparator(JSeparator.HORIZONTAL));
 
                         for (String wrongAnswer : InductionSWController.getInstance().getCurrentInductee().getWrongAnswers()) {
@@ -207,17 +211,32 @@ public class QuizFrame extends JFrame {
                             panel.add(new JLabel("Question " + (Integer.parseInt(data[2]) + 1) + ":"));
                             panel.add(new JLabel(InductionSWController.getInstance().getQuestionnaire()
                                     .getQuestions().get(Integer.parseInt(data[2])).getText()));
-                            panel.add(new JLabel("*************"));
+
                             panel.add(new JLabel("Your answer: " + data[0]));
                             panel.add(new JLabel("The Correct Answer was: " + data[1]));
-                            panel.add(new JLabel("*************"));
+                            panel.add(Box.createVerticalStrut(5));
                             panel.add(new JSeparator(JSeparator.HORIZONTAL));
 
 
                         }
 
-
-                        frame.getContentPane().add(panel);
+                        JPanel bottomButtonPanel = new JPanel();
+                        JButton completeInductionBtn = new JButton("Complete induction");
+                        completeInductionBtn.addActionListener(new ButtonsActionListener(outerClass) {
+                            public void actionPerformed(ActionEvent e) {
+                                SwingUtilities.invokeLater(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        new MainDashBoardFrame().setSize(300,400);
+                                    }
+                                });
+                                outerClass.dispose();
+                            }
+                        });
+                        bottomButtonPanel.add(completeInductionBtn);
+                        passedPanel.add(panel, BorderLayout.CENTER);
+                        passedPanel.add(bottomButtonPanel, BorderLayout.SOUTH);
+                        frame.getContentPane().add(passedPanel);
                         frame.pack();
                         frame.setVisible(true);
 
@@ -238,6 +257,7 @@ public class QuizFrame extends JFrame {
                         panel.add(scoreLabel);
                         panel.add(passLabel);
                         panel.add(wrongLabel);
+                        panel.add(Box.createVerticalStrut(5));
                         panel.add(new JSeparator(JSeparator.HORIZONTAL));
 
                         for (String wrongAnswer : InductionSWController.getInstance().getCurrentInductee().getWrongAnswers()) {
@@ -247,10 +267,11 @@ public class QuizFrame extends JFrame {
                             String[] data = wrongAnswer.split("\\|");
 
                             panel.add(new JLabel("Question " + (Integer.parseInt(data[2]) + 1) + ":"));
-                            panel.add(new JLabel("*************"));
+                            panel.add(new JLabel(InductionSWController.getInstance().getQuestionnaire()
+                                    .getQuestions().get(Integer.parseInt(data[2])).getText()));
                             panel.add(new JLabel("Your answer: " + data[0]));
 //                            panel.add(new JLabel("The Correct Answer was: " + data[1]));
-                            panel.add(new JLabel("*************"));
+                            panel.add(Box.createVerticalStrut(5));
                             panel.add(new JSeparator(JSeparator.HORIZONTAL));
 
 
@@ -269,6 +290,14 @@ public class QuizFrame extends JFrame {
                         quitBtn.addActionListener(new ButtonsActionListener(outerClass) {
                             public void actionPerformed(ActionEvent e) {
                                // TODO: return to main dashboard
+                                SwingUtilities.invokeLater(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        new MainDashBoardFrame();
+                                    }
+                                });
+
+
                                 outerClass.dispose();
                             }
                         });
