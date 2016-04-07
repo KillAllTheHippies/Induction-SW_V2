@@ -23,8 +23,10 @@ public class QuestionPanel extends JPanel {
     private Inductee currentInductee;
     private MultipleChoiceQuestion q;
     private JRadioButton btn1,btn2,btn3,btn4;
+    private ButtonGroup btnGroup;
     private ArrayList<JRadioButton> btnArray = new ArrayList<>();
     private BufferedImage im;
+
 
 //    private DataModel dataModel;
 
@@ -51,7 +53,7 @@ public class QuestionPanel extends JPanel {
         btnArray.add(btn3);
         btnArray.add(btn4);
 
-        ButtonGroup btnGroup = new ButtonGroup();
+        btnGroup = new ButtonGroup();
         btnGroup.add(btn1);
         btnGroup.add(btn2);
         btnGroup.add(btn3);
@@ -83,6 +85,10 @@ public class QuestionPanel extends JPanel {
 
 
 
+    }
+
+    public ButtonGroup getButtonGroup() {
+        return this.btnGroup;
     }
 
     /**
