@@ -56,6 +56,11 @@ public class Inductee implements Serializable {
         this.quizAnswers[questionIndex] = answer;
     }
 
+    public int getQuizPercentCorrect() {
+        int quizScore = InductionSWController.getInstance().getQuestionnaire().getQuestions().size() - wrongAnswers.size();
+        return ((quizScore * 100) / InductionSWController.getInstance().getQuestionnaire().getQuestions().size());
+    }
+
     /**
      * Retrieve an answer given its index
      * @param index
@@ -72,8 +77,13 @@ public class Inductee implements Serializable {
 //        for (BufferedImage eachImage : documents) {
 //            ImageIO.write(eachImage, "png", out); // png is lossless
 //        }
-        // write the photograph
-        ImageIO.write(photo, "png", out);
+        // write the photograph if it exists
+        if (photo != null) {
+            ImageIO.write(photo, "png", out);
+        }
+//        else {
+//            ImageIO.write(new BufferedImage(640,480,photo.getType()), "png", out);
+//        }
     }
 
     private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException {

@@ -17,7 +17,7 @@ import java.util.ArrayList;
  */
 public class QuizFrame extends JFrame {
 
-    private JButton checkAnswerButton;
+    private JButton scoreAssessmentButton;
     private JButton cancelInductionButton;
 
     //    private MultipleChoiceQuestion questionnaire;
@@ -127,17 +127,17 @@ public class QuizFrame extends JFrame {
         // Instantiate panel, button & listener, add listener to button,
         // add button to panel, return panel.
         JPanel buttonPanel = new JPanel();
-        checkAnswerButton = new JButton("Check Answer");
+        scoreAssessmentButton = new JButton("Score Assessment");
         cancelInductionButton = new JButton("Cancel Induction");
         ButtonsActionListener buttonListener =
                 new ButtonsActionListener(this);
 
-        checkAnswerButton.addActionListener(buttonListener);
+        scoreAssessmentButton.addActionListener(buttonListener);
         cancelInductionButton.addActionListener(buttonListener);
 
         buttonPanel.add(cancelInductionButton);
         buttonPanel.add(Box.createHorizontalStrut(120));
-        buttonPanel.add(checkAnswerButton);
+        buttonPanel.add(scoreAssessmentButton);
 
         return buttonPanel;
     }
@@ -164,9 +164,9 @@ public class QuizFrame extends JFrame {
             //Listener for button clicks.
             JButton sourceButton = (JButton) e.getSource();
 
-            // ------------------CHECK ANSWER BUTTON------------------
+            // ------------------SCORE ASSESSMENT BUTTON------------------
 
-            if (sourceButton.equals(checkAnswerButton)) {
+            if (sourceButton.equals(scoreAssessmentButton)) {
 //                for (int i = 0; i< InductionSWController.getInstance().getQuestionnaire().getQuestions().size(); i++) {
 ////                    MultipleChoiceQuestion quest = InductionSWController.getInstance().getQuestionnaire().getQuestions().get(i);
 //
@@ -196,16 +196,20 @@ public class QuizFrame extends JFrame {
                         JPanel panel = new JPanel();
                         panel.setLayout(new GridLayout(0, 1));
 
-                        JLabel scoreLabel = new JLabel("Your Score was: " + quizScore + " out of " + quizSize +
+                        JLabel scoreLabel = new JLabel("Your Score was: " + quizScore + " correct out of " + quizSize +
                                 "(" + (quizScore * 100) / quizSize + "%)");
 
-                        JLabel congratsLabel = new JLabel("Congratulations! You have passed your induction.");
+
                         JLabel wrongLabel = new JLabel("Please pay attention to the questions that you answered incorrectly.");
-                        panel.add(congratsLabel);
+                        panel.add(new JLabel("Congratulations! You have passed your induction."));
                         panel.add(scoreLabel);
+//                        panel.add(new JLabel("Please pay attention to the questions that you answered incorrectly."));
                         if (quizScore < quizSize)
                             panel.add(wrongLabel);
-                        panel.add(Box.createVerticalStrut(5));
+                        else
+                            panel.add(new JLabel("You answered all questions correctly!"));
+
+                            panel.add(Box.createVerticalStrut(5));
                         panel.add(new JSeparator(JSeparator.HORIZONTAL));
 
                         for (String wrongAnswer : InductionSWController.getInstance().getCurrentInductee().getWrongAnswers()) {
@@ -231,6 +235,16 @@ public class QuizFrame extends JFrame {
                         completeInductionBtn.addActionListener(new ButtonsActionListener(outerClass) {
                             public void actionPerformed(ActionEvent e) {
                                 // persist the Inductee
+                                if (InductionSWController.getInstance().getCurrentInductee() != null) {
+                                    InductionSWController.getInstance().saveCurrentInductee();
+                                } else {
+                                    System.out.println("CURRENT INDUCTEE IS NULL!!!!!!!!!!!!!!!!!!!!");
+                                }
+
+                                // Clear the current Inductee
+                                InductionSWController.getInstance().setCurrentInductee(null);
+
+                                // Write the datamodel
                                 InductionSWController.getInstance().save();
                                 SwingUtilities.invokeLater(new Runnable() {
                                     @Override
@@ -255,10 +269,10 @@ public class QuizFrame extends JFrame {
                         JPanel panel = new JPanel();
                         panel.setLayout(new GridLayout(0, 1));
 
-                        JLabel scoreLabel = new JLabel("Your Score was: " + quizScore + " out of " + quizSize +
+                        JLabel scoreLabel = new JLabel("Your Score was: " + quizScore + " correct out of " + quizSize +
                                 "(" + (quizScore * 100) / quizSize + "%)");
-                        JLabel passLabel = new JLabel("Unfortunately you have not passed. " +
-                                "Please watch the induction video again and attempt to answer " +
+                        JLabel passLabel = new JLabel("Unfortunately you have NOT passed. " +
+                                "Please watch the induction video again and attempt to answer at least" +
                                 InductionSWController.QUIZ_PASS_PERCENTAGE + "% correct.");
 
                         JLabel wrongLabel = new JLabel("Your wrong answers. ");

@@ -105,16 +105,17 @@ public class InductionSWController
     public Inductee createInductee( String name, String company, String jobTitle, String supervisor, String carReg, String competencies, long dateOfInduction) {
         Inductee i = new Inductee( name, company, jobTitle, supervisor, carReg, competencies, dateOfInduction);
 
-        // Capture the picture and add it to the inductee
-        try {
-            i.setPhoto(takePicture());
-            System.out.println("picture taken, createInductee");
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+//        // Capture the picture and add it to the inductee
+//        try {
+//            i.setPhoto(takePicture());
+//            System.out.println("picture taken, createInductee");
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
         // Add the inductee to the datamodel
-        this.dataModel.addInductee(i);
+        // TODO: This will be deleted and current inductee will be added
+//        this.dataModel.addInductee(i);
 
         // Set the current inductee
         this.currentInductee = i;
@@ -123,6 +124,14 @@ public class InductionSWController
         return i;
     }
 
+    public void saveCurrentInductee() {
+
+        if (currentInductee != null) {
+            this.dataModel.addInductee(currentInductee);
+        } else {
+            System.out.println("CURRENTINDUCTEE IS NULL");
+        }
+    }
     public Inductee getCurrentInductee() {
         return currentInductee;
     }
@@ -166,9 +175,7 @@ public class InductionSWController
         for (int j = 0; j < questionnaire.getQuestions().size(); j++) {
             if (checkAnswer(questionnaire.getQuestions().get(j), inductee.getAnswer(j))) {
                 amountCorrect++;
-                //Test code
-//                System.out.println("Correct Answer: " + j);
-//                System.out.println("amountCorrect = " + amountCorrect);
+
             } else {
                 // get the text of the answer given by the inductee
                 wrongAnswers.add(""+questionnaire.getQuestions().get(j).getAnswerText(inductee.getAnswer(j))

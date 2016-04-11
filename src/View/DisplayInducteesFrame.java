@@ -1,18 +1,12 @@
 package view;
 
-import java.awt.BorderLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
-import javax.swing.Box;
-import javax.swing.BoxLayout;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
-import javax.swing.JScrollPane;
-import javax.swing.JTable;
+import javax.swing.*;
 
 import controller.InductionSWController;
 import controller.interfaces.IGui;
@@ -39,6 +33,7 @@ public class DisplayInducteesFrame extends JFrame implements IGui
         //content of our JFrame
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BorderLayout());
+        mainPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
 
         //Call to method to create side panel
         JPanel sidePanel = createSideButtonPanel();
@@ -84,19 +79,25 @@ public class DisplayInducteesFrame extends JFrame implements IGui
     private JPanel createBottomButtonPanel()
     {
         okButton = new JButton("OK");
-        cancelButton = new JButton("Cancel");
-        saveButton = new JButton("Save");
+//        cancelButton = new JButton("Cancel");
+//        saveButton = new JButton("Save");
 
         JPanel buttonPanel = new JPanel();
         buttonPanel.add(okButton);
-        buttonPanel.add(cancelButton);
-        buttonPanel.add(saveButton);
+//        buttonPanel.add(cancelButton);
+//        buttonPanel.add(saveButton);
 
-        saveButton.addActionListener(new ActionListener(){
+//        saveButton.addActionListener(new ActionListener(){
+//            public void actionPerformed(ActionEvent e)
+//            {
+//                InductionSWController.getInstance().save();
+//                JOptionPane.showMessageDialog(DisplayInducteesFrame.this, "Inductees saved");
+//            }
+//        });
+        okButton.addActionListener(new ActionListener(){
             public void actionPerformed(ActionEvent e)
             {
-                InductionSWController.getInstance().save();
-                JOptionPane.showMessageDialog(DisplayInducteesFrame.this, "Inductees saved");
+                dispose();
             }
         });
 
@@ -137,6 +138,16 @@ public class DisplayInducteesFrame extends JFrame implements IGui
         return sideButtonPanel;
     }
 
+    public void showImage(BufferedImage img, String text, int x, int y) {
+        JFrame frame0 = new JFrame();
+        frame0.getContentPane().add(new JPanelOpenCV(img));
+        // frame0.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame0.setTitle(text);
+        frame0.setSize(img.getWidth(), img.getHeight() + 30);
+        frame0.setLocation(x, y);
+        frame0.setVisible(true);
+    }
+
     //Inner class implementation of ActionListener
     private class ButtonsActionListener implements ActionListener
     {
@@ -156,47 +167,85 @@ public class DisplayInducteesFrame extends JFrame implements IGui
             //we only added an instance of this listener to
             //JButtons
             JButton sourceButton = (JButton)e.getSource();
-            if(sourceButton.equals(displayScoreButton))
-            {
-                //TODO: attach the quiz score to the inductee
+            //          DISPLAY SCORE BUTTON
+            if(sourceButton.equals(displayScoreButton)) {
+                //Check if row is selected
+                if (inducteesTable.getSelectedRow() == -1) {
+                    JOptionPane.showMessageDialog
+                            (outerClass,
+                                    "You need to select a row in the table",
+                                    "Error", JOptionPane.ERROR_MESSAGE);
+                } else {
+                    Inductee i = InductionSWController.getInstance().getDataModel().getInductee(inducteesTable.getSelectedRow());
+
+                    final JDialog frame = new JDialog(outerClass, i.getName(), true);
 
 
-//                PlayerType [] types =
-//                        {PlayerType.STRIKER, PlayerType.GOALKEEPER};
-//
-//                //We supply in a list of PlayerType objects
-//                //These will be displayed in a combo box in the
-//                //JOptionPane dialog. Whichever one is chosen by
-//                //the user before they click OK will be returned after OK is clicked.
-//                //showInputDialog method returns type Object. Because
-//                //we know PlayerType objects are all that went in
-//                //as choices, then the selected choice must be a PlayerType.
-//                //Therefore we can cast the returned object to a PlayerType.
-//
-//                PlayerType chosenPlayerType =
-//                        (PlayerType)
-//                                JOptionPane.showInputDialog(
-//                                        outerClass,
-//                                        "Choose player type :",
-//                                        "Add A Player",
-//                                        JOptionPane.QUESTION_MESSAGE,
-//                                        null,
-//                                        types,
-//                                        types[0]);
-//
-//                AddPlayerDialog addPlyrDlg =
-//                        new AddPlayerDialog(this.outerClass, "Add Player", chosenPlayerType);
-//                addPlyrDlg.setSize(500, 300);
-//                addPlyrDlg.setVisible(true);
+                    JPanel displayScorePanel = new JPanel();
 
+                    displayScorePanel.setLayout(new BorderLayout());
+                    JPanel panel = new JPanel();
+                    panel.setLayout(new GridLayout(0, 1));
+                    panel.add(new JLabel("This inductee scored: " + i.getQuizPercentCorrect() + "%"));
+                    panel.add(new JLabel("" + i.getWrongAnswers().size() + " wrong answers out of " +
+                            InductionSWController.getInstance().getQuestionnaire().getQuestions().size() + "." ));
+                    panel.add(Box.createVerticalStrut(10));
+                    panel.add(new JSeparator(JSeparator.HORIZONTAL));
+
+                    for (String wrongAnswer : i.getWrongAnswers()) {
+                    /* create a label with the wrong answer and add it to the panel
+                     * wrongAnswer format: Wrong_answer|Correct_answer|Question_index
+                     * Wrong answer = 0, correct answer = 1 question index = 2*/
+                        String[] data = wrongAnswer.split("\\|");
+
+                        panel.add(new JLabel("Question " + (Integer.parseInt(data[2]) + 1) + ":"));
+                        panel.add(new JLabel(InductionSWController.getInstance().getQuestionnaire()
+                                .getQuestions().get(Integer.parseInt(data[2])).getText()));
+
+                        panel.add(new JLabel("Given answer: " + data[0]));
+                        panel.add(new JLabel("Correct Answer: " + data[1]));
+                        panel.add(Box.createVerticalStrut(5));
+                        panel.add(new JSeparator(JSeparator.HORIZONTAL));
+                    }
+
+                    displayScorePanel.add(panel, BorderLayout.CENTER);
+
+                    frame.getContentPane().add(displayScorePanel);
+                    frame.pack();
+                    frame.setVisible(true);
+                }
             }
-
-
             else if(sourceButton.equals(showPhotoButton))
             {
-                System.out.println("Edit button clicked");
+                //Check if row is selected
+                if(inducteesTable.getSelectedRow() == -1)
+                {
+                    JOptionPane.showMessageDialog
+                            (outerClass,
+                                    "You need to select a row in the table",
+                                    "Error", JOptionPane.ERROR_MESSAGE);
+                }
+                else
+                {
+                    if (InductionSWController.getInstance().getDataModel().getInductees().get
+                            (inducteesTable.getSelectedRow()).getPhoto() != null) {
+                        showImage(
+                                InductionSWController.getInstance().getDataModel().getInductees().get
+                                        (inducteesTable.getSelectedRow()).getPhoto(),
+                                InductionSWController.getInstance().getDataModel().getInductees().get
+                                        (inducteesTable.getSelectedRow()).getName(),
+                                30, 30);
+                    } else {
+                        JOptionPane.showMessageDialog
+                                (outerClass,
+                                        "No photo available.",
+                                        "Error", JOptionPane.ERROR_MESSAGE);
+                    }
+
+
+                }
             }
-            //This is the code which responds to the delete button
+            //              DELETE BUTTON
             else
             {
                 //Check if row is selected
@@ -209,7 +258,7 @@ public class DisplayInducteesFrame extends JFrame implements IGui
                 }
                 else
                 {
-                    String message = "Are you sure you want to delete this inductee ?";
+                    String message = "WARNING: Are you sure you want to delete this inductee ? \nTHIS OPERATION IS UNRECOVERABLE!!";
                     int answer =
                             JOptionPane.showConfirmDialog(outerClass, message);
                     if(answer == JOptionPane.YES_OPTION)
@@ -217,6 +266,7 @@ public class DisplayInducteesFrame extends JFrame implements IGui
                         ArrayList<Inductee> inductees = InductionSWController.getInstance().getDataModel().getInductees();
                         inductees.remove(inducteesTable.getSelectedRow());
                         InductionSWController.getInstance().getDataModel().setInductees(inductees);
+                        InductionSWController.getInstance().save();
                         refreshGUI();
                     }
                     else if (answer == JOptionPane.NO_OPTION)

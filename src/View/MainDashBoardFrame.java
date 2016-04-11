@@ -18,6 +18,7 @@ public class MainDashBoardFrame extends JFrame implements IGui{
         /* DEFAULT CONSTRUCTOR */
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new BorderLayout());
+        mainPanel.setBorder(BorderFactory.createEmptyBorder(100, 100, 100, 100));
         mainPanel.add(createCenterPanel(), BorderLayout.CENTER);
 
         // add to the layout
