@@ -159,7 +159,7 @@ public class QuizFrame extends JFrame {
             JButton sourceButton = (JButton) e.getSource();
 
             // ------------------CHECK ANSWER BUTTON------------------
-            // TODO: Validation: Ensure all questions are answered.
+
             if (sourceButton.equals(checkAnswerButton)) {
 //                for (int i = 0; i< InductionSWController.getInstance().getQuestionnaire().getQuestions().size(); i++) {
 ////                    MultipleChoiceQuestion quest = InductionSWController.getInstance().getQuestionnaire().getQuestions().get(i);
@@ -224,6 +224,8 @@ public class QuizFrame extends JFrame {
                         JButton completeInductionBtn = new JButton("Complete induction");
                         completeInductionBtn.addActionListener(new ButtonsActionListener(outerClass) {
                             public void actionPerformed(ActionEvent e) {
+                                // persist the Inductee
+                                InductionSWController.getInstance().save();
                                 SwingUtilities.invokeLater(new Runnable() {
                                     @Override
                                     public void run() {

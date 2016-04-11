@@ -21,7 +21,8 @@ public class MainDashBoardFrame extends JFrame {
 
         // add to the layout
         this.add(mainPanel);
-        this.setSize(300,300);
+        this.setExtendedState(JFrame.MAXIMIZED_BOTH); // Fullscreen
+//        this.setSize(300,300);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
