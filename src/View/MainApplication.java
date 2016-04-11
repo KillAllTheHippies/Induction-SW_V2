@@ -6,6 +6,8 @@ import controller.interfaces.IPersistor;
 import model.DataModel;
 import org.opencv.core.Core;
 
+import javax.swing.*;
+
 /**
  * Created by Jamie on 01/03/16.
  * TODO: Connect the inductee to the quiz and collect the answers
@@ -29,10 +31,11 @@ public class MainApplication {
         // Create an instance of our main application frame which builds the UI
 //        UserInputFrame uif = new UserInputFrame("Induction Application");
         MainDashBoardFrame dbf = new MainDashBoardFrame();
-        dbf.setSize(700, 300);
+        dbf.setExtendedState(JFrame.MAXIMIZED_BOTH); // Fullscreen
+//        dbf.setSize(700, 300);
         dbf.setVisible(true);
 
         // Connect the controller to the view
-//        TwitterController.getInstance().setGuiReference(uif);
+        InductionSWController.getInstance().setGuiReference(dbf);
     }
 }

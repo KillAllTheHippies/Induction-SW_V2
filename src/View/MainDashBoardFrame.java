@@ -1,6 +1,7 @@
 package view;
 
 import controller.InductionSWController;
+import controller.interfaces.IGui;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -11,7 +12,7 @@ import java.awt.event.ActionListener;
 /**
  * Created by Jamie on 07/04/16.
  */
-public class MainDashBoardFrame extends JFrame {
+public class MainDashBoardFrame extends JFrame implements IGui{
 
     public MainDashBoardFrame() throws HeadlessException {
         /* DEFAULT CONSTRUCTOR */
@@ -20,8 +21,9 @@ public class MainDashBoardFrame extends JFrame {
         mainPanel.add(createCenterPanel(), BorderLayout.CENTER);
 
         // add to the layout
-        this.add(mainPanel);
         this.setExtendedState(JFrame.MAXIMIZED_BOTH); // Fullscreen
+        this.setUndecorated(true);
+        this.add(mainPanel);
 //        this.setSize(300,300);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -48,5 +50,10 @@ public class MainDashBoardFrame extends JFrame {
 
 
         return centerPanel;
+    }
+
+    @Override
+    public void refreshGUI() {
+
     }
 }

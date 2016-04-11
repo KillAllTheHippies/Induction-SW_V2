@@ -17,7 +17,7 @@ import java.awt.image.BufferedImage;
  */
 public class UserInputFrame extends JFrame {
 
-    private JButton closeButton;
+    private JButton cancelButton;
     private JButton startButton;
     private JButton addUserButton;
     private JButton takeQuizButton;
@@ -58,6 +58,7 @@ public class UserInputFrame extends JFrame {
         this.getContentPane().add(mainPanel);
 
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+//        this.setUndecorated(true);
 
     }
 
@@ -114,15 +115,15 @@ public class UserInputFrame extends JFrame {
         // Instantiate panel, button & listener, add listener to button,
         // add button to panel, return panel.
         JPanel buttonPanel = new JPanel();
-        closeButton = new JButton("Close");
+        cancelButton = new JButton("Cancel");
         startButton = new JButton("START");
         ButtonsActionListener buttonListener =
                 new ButtonsActionListener(this);
 
-        closeButton.addActionListener(buttonListener);
+        cancelButton.addActionListener(buttonListener);
         startButton.addActionListener(buttonListener);
 
-        buttonPanel.add(closeButton);
+        buttonPanel.add(cancelButton);
         buttonPanel.add(Box.createHorizontalStrut(5));
         buttonPanel.add(startButton);
 
@@ -188,12 +189,17 @@ public class UserInputFrame extends JFrame {
                         tfCompetencies.getText(), System.currentTimeMillis());
                 System.out.println("user added");
 
-                // ------------------CLOSE BUTTON------------------
-            } else if (sourceButton.equals(closeButton)) {
+                // ------------------CANCEL BUTTON------------------
+            } else if (sourceButton.equals(cancelButton)) {
 
-                InductionSWController.getInstance().getPersistor().write
-                        (InductionSWController.getInstance().getDataModel());
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        new MainDashBoardFrame();
+                    }
+                });
                 dispose();
+
 
             }
             // ------------------START BUTTON------------------

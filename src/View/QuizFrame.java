@@ -18,6 +18,7 @@ import java.util.ArrayList;
 public class QuizFrame extends JFrame {
 
     private JButton checkAnswerButton;
+    private JButton cancelInductionButton;
 
     //    private MultipleChoiceQuestion questionnaire;
     //private JRadioButton btn1,btn2,btn3,btn4;
@@ -52,6 +53,7 @@ public class QuizFrame extends JFrame {
 
         // add to the layout
         this.add(mainPanel);
+        this.setUndecorated(true); // Remove window border
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
@@ -126,11 +128,15 @@ public class QuizFrame extends JFrame {
         // add button to panel, return panel.
         JPanel buttonPanel = new JPanel();
         checkAnswerButton = new JButton("Check Answer");
+        cancelInductionButton = new JButton("Cancel Induction");
         ButtonsActionListener buttonListener =
                 new ButtonsActionListener(this);
 
         checkAnswerButton.addActionListener(buttonListener);
+        cancelInductionButton.addActionListener(buttonListener);
 
+        buttonPanel.add(cancelInductionButton);
+        buttonPanel.add(Box.createHorizontalStrut(120));
         buttonPanel.add(checkAnswerButton);
 
         return buttonPanel;
@@ -198,7 +204,7 @@ public class QuizFrame extends JFrame {
                         panel.add(congratsLabel);
                         panel.add(scoreLabel);
                         if (quizScore < quizSize)
-                        panel.add(wrongLabel);
+                            panel.add(wrongLabel);
                         panel.add(Box.createVerticalStrut(5));
                         panel.add(new JSeparator(JSeparator.HORIZONTAL));
 
@@ -229,7 +235,7 @@ public class QuizFrame extends JFrame {
                                 SwingUtilities.invokeLater(new Runnable() {
                                     @Override
                                     public void run() {
-                                        new MainDashBoardFrame().setSize(300,400);
+                                        new MainDashBoardFrame();
                                     }
                                 });
                                 outerClass.dispose();
@@ -291,7 +297,7 @@ public class QuizFrame extends JFrame {
                         JButton quitBtn = new JButton("Quit");
                         quitBtn.addActionListener(new ButtonsActionListener(outerClass) {
                             public void actionPerformed(ActionEvent e) {
-                               // TODO: return to main dashboard
+                                // TODO: return to main dashboard
                                 SwingUtilities.invokeLater(new Runnable() {
                                     @Override
                                     public void run() {
@@ -322,6 +328,14 @@ public class QuizFrame extends JFrame {
                     JOptionPane.showMessageDialog(null, "You need to answer all questions", "Error", JOptionPane.ERROR_MESSAGE);
 
                 }
+            } else { // ELSE THE BUTTON IS CANCEL INDUCTION
+                SwingUtilities.invokeLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        new MainDashBoardFrame();
+                    }
+                });
+                dispose();
             }
 
         }
