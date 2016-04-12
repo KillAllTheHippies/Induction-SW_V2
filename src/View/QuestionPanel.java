@@ -30,7 +30,8 @@ public class QuestionPanel extends JPanel {
 
 //    private DataModel dataModel;
 
-    public QuestionPanel(MultipleChoiceQuestion q) {
+    public QuestionPanel(MultipleChoiceQuestion q)
+    {
         this.q = q;
         this.currentInductee = InductionSWController.getInstance().getCurrentInductee();
 //        this.dataModel = InductionSWController.getInstance().getDataModel();
@@ -81,12 +82,11 @@ public class QuestionPanel extends JPanel {
         }
 
         // Add a border to the panel (padding)
-        this.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        this.setBorder(BorderFactory.createEmptyBorder(10, 20, 10, 10));
 
 
 
     }
-
     public ButtonGroup getButtonGroup() {
         return this.btnGroup;
     }

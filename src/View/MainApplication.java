@@ -15,7 +15,7 @@ import javax.swing.*;
 public class MainApplication {
 
     public static void main(String[] args) {
-
+        // Load the camera libraries
         System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 
         // Create the persistor

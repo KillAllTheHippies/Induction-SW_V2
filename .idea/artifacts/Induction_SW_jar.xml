@@ -4,13 +4,13 @@
     <root id="archive" name="Induction-SW.jar">
       <element id="module-output" name="Induction-SW" />
       <element id="extracted-dir" path="$PROJECT_DIR$/vlcj-3.0.1/vlcj-3.0.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/FeidhlimApp/opencv/build/java/opencv-310.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$USER_HOME$/Documents/+COLLEGE/_3RD_YEAR/lib/miglayout-4.0-swing.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/vlcj-3.0.1/jna-3.5.2.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$USER_HOME$/Desktop/FeidhlimApp/opencv/build/java/opencv-310.jar" path-in-jar="/" />
       <element id="library" level="project" name="jna-3.5.2" />
       <element id="library" level="project" name="miglayout-4.0-swing" />
+      <element id="library" level="project" name="opencv_java310" />
       <element id="file-copy" path="$PROJECT_DIR$/vlcj-3.0.1/vlcj-3.0.1.jar" />
-      <element id="library" level="project" name="x86" />
     </root>
   </artifact>
 </component>

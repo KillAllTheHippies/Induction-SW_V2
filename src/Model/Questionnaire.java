@@ -1,5 +1,7 @@
 package model;
 
+import controller.InductionSWController;
+
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -99,7 +101,7 @@ public class Questionnaire {
         // initialise the answers array (to the size of the amount of questions)
         try{
 
-            BufferedReader in = new BufferedReader(new FileReader("C:\\InductionApp\\Questionnaire.txt"));
+            BufferedReader in = new BufferedReader(new FileReader(InductionSWController.QUESTIONNAIRE_LOCATION));
             String s;
             int index = 0;
             while((s = in.readLine()) != null){

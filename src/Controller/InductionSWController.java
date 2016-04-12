@@ -42,6 +42,9 @@ public class InductionSWController
     private Questionnaire questionnaire;
     private Inductee currentInductee;
     public static final int QUIZ_PASS_PERCENTAGE = 70;
+    public static final String QUESTIONNAIRE_LOCATION = "C:\\InductionApp\\Questionnaire.txt";
+    public static final String VLC_LIB_LOCATION = "C:\\InductionApp\\lib";
+    public static final String DATAMODEL_FILE_LOCATION = "C:\\InductionApp\\DataModel.dat";
     //private ArrayList<Inductee> dataModel;
 
     //Reference to the GUI
@@ -150,6 +153,7 @@ public class InductionSWController
     public void save()
     {
         this.persistor.write(this.dataModel);
+        System.out.println("save method of controller called");
 //        this.persistor.writeInductee(this.newlyAddedInductees);
 //        this.newlyAddedInductees.clear();
     }

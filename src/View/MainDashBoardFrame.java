@@ -38,9 +38,12 @@ public class MainDashBoardFrame extends JFrame implements IGui{
 //        beginInductionBtn.setBorder(new EmptyBorder(100,100,100,100));
         beginInductionBtn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                // reset the current inductee
+                InductionSWController.getInstance().setCurrentInductee(null);
                 UserInputFrame uif = new UserInputFrame("Induction Application");
                 uif.setVisible(true);
                 uif.setSize(640,480);
+                uif.setLocationRelativeTo(null);
                 dispose(); // Hide the Dashboard
 //                setVisible(false); // hide the dashboard
             }

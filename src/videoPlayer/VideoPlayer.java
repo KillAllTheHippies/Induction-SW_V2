@@ -41,7 +41,7 @@ public class VideoPlayer {
     private final JButton continueButton;
 
     public static void main(final String[] args) {
-        NativeLibrary.addSearchPath(RuntimeUtil.getLibVlcLibraryName(), "C:\\InductionApp\\lib");
+        NativeLibrary.addSearchPath(RuntimeUtil.getLibVlcLibraryName(), InductionSWController.VLC_LIB_LOCATION);
         Native.loadLibrary(RuntimeUtil.getLibVlcLibraryName(), LibVlc.class);
 //        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 //        new NativeDiscovery().discover();

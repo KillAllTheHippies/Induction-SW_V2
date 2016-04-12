@@ -12,13 +12,13 @@ import java.io.*;
 
 public class FilePersistor implements IPersistor{
 
-    private static final String FILE_LOCATION = "DataModel.dat";
+    private static final String FILE_LOCATION = "C:\\InductionApp\\DataModel.dat";
 
     public void write(DataModel dm)
     {
         try
         {
-            FileOutputStream fos = new FileOutputStream("C:\\InductionApp\\DataModel.dat");
+            FileOutputStream fos = new FileOutputStream(InductionSWController.DATAMODEL_FILE_LOCATION);
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(dm);
             oos.close();
@@ -40,11 +40,11 @@ public class FilePersistor implements IPersistor{
 
     public DataModel read() {
 
-        //TODO: Check to see the data file exists before trying to read it
-        if (new File(FILE_LOCATION).isFile()) {
+
+        if (new File(InductionSWController.DATAMODEL_FILE_LOCATION).isFile()) {
 
             try {
-                FileInputStream fis = new FileInputStream(FILE_LOCATION);
+                FileInputStream fis = new FileInputStream(InductionSWController.DATAMODEL_FILE_LOCATION);
                 ObjectInputStream ois = new ObjectInputStream(fis);
                 //We know that a DataModel object was serialized INTO
                 //the file, therefore a DataModel object MUST be coming
@@ -72,8 +72,9 @@ public class FilePersistor implements IPersistor{
         } else // else file doesn't exist so return an empty datamodel
         {
             // initialise the datamodel .
-            DataModel dm = new DataModel();
-            return dm;
+//            DataModel dm = new DataModel();
+//            return dm;
+            return new DataModel();
         }
 
     }

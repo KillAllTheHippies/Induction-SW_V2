@@ -6,6 +6,8 @@ import model.MultipleChoiceQuestion;
 import model.Questionnaire;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import javax.swing.border.EtchedBorder;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -188,13 +190,21 @@ public class QuizFrame extends JFrame {
                     int quizSize = InductionSWController.getInstance().getQuestionnaire().getQuestions().size();
 
                     final JDialog frame = new JDialog(outerClass, "Score", true);
+                    // remove close button window border
+                    frame.setUndecorated(true);
+
 
                     // IF QUIZ IS PASSED
                     if (InductionSWController.getInstance().isQuizPassed((quizScore * 100) / quizSize)) {
+
                         JPanel passedPanel = new JPanel();
                         passedPanel.setLayout(new BorderLayout());
+
                         JPanel panel = new JPanel();
                         panel.setLayout(new GridLayout(0, 1));
+
+                        passedPanel.setBorder(new EtchedBorder(EtchedBorder.RAISED));
+                        panel.setBorder(new EmptyBorder(10,10,10,10));
 
                         JLabel scoreLabel = new JLabel("Your Score was: " + quizScore + " correct out of " + quizSize +
                                 "(" + (quizScore * 100) / quizSize + "%)");
@@ -237,15 +247,15 @@ public class QuizFrame extends JFrame {
                                 // persist the Inductee
                                 if (InductionSWController.getInstance().getCurrentInductee() != null) {
                                     InductionSWController.getInstance().saveCurrentInductee();
+                                    // Write the datamodel
+                                    InductionSWController.getInstance().save();
                                 } else {
                                     System.out.println("CURRENT INDUCTEE IS NULL!!!!!!!!!!!!!!!!!!!!");
                                 }
 
                                 // Clear the current Inductee
-                                InductionSWController.getInstance().setCurrentInductee(null);
+//                                InductionSWController.getInstance().setCurrentInductee(null);
 
-                                // Write the datamodel
-                                InductionSWController.getInstance().save();
                                 SwingUtilities.invokeLater(new Runnable() {
                                     @Override
                                     public void run() {
@@ -259,20 +269,29 @@ public class QuizFrame extends JFrame {
                         passedPanel.add(panel, BorderLayout.CENTER);
                         passedPanel.add(bottomButtonPanel, BorderLayout.SOUTH);
                         frame.getContentPane().add(passedPanel);
+
                         frame.pack();
+
+                        // Center the dialog
+                        frame.setLocationRelativeTo(null);
+//                        frame.setLocation(100,100);
                         frame.setVisible(true);
 
 
                     } else { // Else Quiz is FAILED
                         JPanel dialogPanel = new JPanel();
                         dialogPanel.setLayout(new BorderLayout());
+
                         JPanel panel = new JPanel();
                         panel.setLayout(new GridLayout(0, 1));
+
+                        dialogPanel.setBorder(new EtchedBorder(EtchedBorder.RAISED));
+                        panel.setBorder(new EmptyBorder(10,10,10,10));
 
                         JLabel scoreLabel = new JLabel("Your Score was: " + quizScore + " correct out of " + quizSize +
                                 "(" + (quizScore * 100) / quizSize + "%)");
                         JLabel passLabel = new JLabel("Unfortunately you have NOT passed. " +
-                                "Please watch the induction video again and attempt to answer at least" +
+                                "Please watch the induction video again and attempt to answer at least " +
                                 InductionSWController.QUIZ_PASS_PERCENTAGE + "% correct.");
 
                         JLabel wrongLabel = new JLabel("Your wrong answers. ");
@@ -332,6 +351,7 @@ public class QuizFrame extends JFrame {
                         dialogPanel.add(panel, BorderLayout.CENTER);
                         frame.getContentPane().add(dialogPanel);
                         frame.pack();
+                        frame.setLocationRelativeTo(null);
                         frame.setVisible(true);
 
                         // Enable the userinput frame and hide this one

@@ -21,8 +21,8 @@ public class DisplayInducteesFrame extends JFrame implements IGui
     private JButton showPhotoButton;
     private JButton deleteButton;
     private JButton okButton;
-    private JButton cancelButton;
-    private JButton saveButton;
+//    private JButton cancelButton;
+//    private JButton saveButton;
     private JTable inducteesTable;
     private InducteesTableModel tableModel;
 
