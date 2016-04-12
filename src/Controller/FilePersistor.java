@@ -18,7 +18,7 @@ public class FilePersistor implements IPersistor{
     {
         try
         {
-            FileOutputStream fos = new FileOutputStream("DataModel.dat");
+            FileOutputStream fos = new FileOutputStream("C:\\InductionApp\\DataModel.dat");
             ObjectOutputStream oos = new ObjectOutputStream(fos);
             oos.writeObject(dm);
             oos.close();

@@ -12,11 +12,16 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
+import com.sun.jna.Native;
+import com.sun.jna.NativeLibrary;
 import controller.InductionSWController;
+import org.opencv.core.Core;
+import uk.co.caprica.vlcj.binding.LibVlc;
 import uk.co.caprica.vlcj.component.EmbeddedMediaPlayerComponent;
 import uk.co.caprica.vlcj.discovery.NativeDiscovery;
 import uk.co.caprica.vlcj.player.MediaPlayer;
 import uk.co.caprica.vlcj.player.MediaPlayerEventAdapter;
+import uk.co.caprica.vlcj.runtime.RuntimeUtil;
 import view.QuizFrame;
 
 public class VideoPlayer {
@@ -36,7 +41,10 @@ public class VideoPlayer {
     private final JButton continueButton;
 
     public static void main(final String[] args) {
-        new NativeDiscovery().discover();
+        NativeLibrary.addSearchPath(RuntimeUtil.getLibVlcLibraryName(), "C:\\InductionApp\\lib");
+        Native.loadLibrary(RuntimeUtil.getLibVlcLibraryName(), LibVlc.class);
+//        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
+//        new NativeDiscovery().discover();
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -46,7 +54,7 @@ public class VideoPlayer {
     }
 
     public VideoPlayer() {
-        frame = new JFrame("My First Media Player");
+        frame = new JFrame("Induction Video");
         frame.setBounds(100, 100, 600, 400);
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         frame.setUndecorated(true);

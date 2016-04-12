@@ -1,3 +1,5 @@
+# VLC Library Files
+/lib/*
 # Media files
 *.mp4
 *.png

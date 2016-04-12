@@ -98,7 +98,8 @@ public class Questionnaire {
 
         // initialise the answers array (to the size of the amount of questions)
         try{
-            BufferedReader in = new BufferedReader(new FileReader("Questionnaire.txt"));
+
+            BufferedReader in = new BufferedReader(new FileReader("C:\\InductionApp\\Questionnaire.txt"));
             String s;
             int index = 0;
             while((s = in.readLine()) != null){
