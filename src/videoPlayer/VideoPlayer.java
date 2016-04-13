@@ -109,7 +109,7 @@ public class VideoPlayer {
         playAgainButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                mediaPlayerComponent.getMediaPlayer().playMedia("C:\\Video4App\\videoviewdemo.mp4");
+                mediaPlayerComponent.getMediaPlayer().playMedia(InductionSWController.VIDEO_FILE_LOCATION);
             }
         });
         continueButton.addActionListener(new ActionListener() {
@@ -182,7 +182,7 @@ public class VideoPlayer {
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.setVisible(true);
 
-        mediaPlayerComponent.getMediaPlayer().playMedia("C:\\Video4App\\videoviewdemo.mp4");
+        mediaPlayerComponent.getMediaPlayer().playMedia(InductionSWController.VIDEO_FILE_LOCATION);
 
     }
 

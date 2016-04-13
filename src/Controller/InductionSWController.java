@@ -45,6 +45,7 @@ public class InductionSWController
     public static final String QUESTIONNAIRE_LOCATION = "C:\\InductionApp\\Questionnaire.txt";
     public static final String VLC_LIB_LOCATION = "C:\\InductionApp\\lib";
     public static final String DATAMODEL_FILE_LOCATION = "C:\\InductionApp\\DataModel.dat";
+    public static final String VIDEO_FILE_LOCATION = "C:\\InductionApp\\InductionVideo.mp4";
     //private ArrayList<Inductee> dataModel;
 
     //Reference to the GUI

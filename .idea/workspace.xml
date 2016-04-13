@@ -7,37 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e4796d8-3638-437e-be61-cca90543abd0" name="Default" comment="Quick comit before restructuring">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/.idea/libraries/x86.xml" afterPath="$PROJECT_DIR$/.idea/libraries/opencv_java310.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new.png" afterPath="$PROJECT_DIR$/new.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Induction_SW_jar/Induction-SW.jar" afterPath="$PROJECT_DIR$/out/artifacts/Induction_SW_jar/Induction-SW.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/Controller/FilePersistor.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/Controller/FilePersistor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/Controller/InductionSWController.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/Controller/InductionSWController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/Model/Questionnaire.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/Model/Questionnaire.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/QuizFrame$ButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/QuizFrame$ButtonsActionListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/QuizFrame.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/QuizFrame.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/videoPlayer/VideoPlayer$6.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/videoPlayer/VideoPlayer$6.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/videoPlayer/VideoPlayer.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/videoPlayer/VideoPlayer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/view/DisplayInducteesFrame.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/view/DisplayInducteesFrame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/view/MainDashBoardFrame$1.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/view/MainDashBoardFrame$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/view/MainDashBoardFrame.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/view/MainDashBoardFrame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/view/QuizFrame$ButtonsActionListener$1$1.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/view/QuizFrame$ButtonsActionListener$1$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/view/QuizFrame$ButtonsActionListener$1.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/view/QuizFrame$ButtonsActionListener$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/view/QuizFrame$ButtonsActionListener$2.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/view/QuizFrame$ButtonsActionListener$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/view/QuizFrame$ButtonsActionListener$3$1.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/view/QuizFrame$ButtonsActionListener$3$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/view/QuizFrame$ButtonsActionListener$3.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/view/QuizFrame$ButtonsActionListener$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/view/QuizFrame$ButtonsActionListener$4.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/view/QuizFrame$ButtonsActionListener$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/artifacts/Induction_SW_jar.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/Induction_SW_jar.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Induction-SW.iml" afterPath="$PROJECT_DIR$/Induction-SW.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/FilePersistor.java" afterPath="$PROJECT_DIR$/src/Controller/FilePersistor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/InductionSWController.java" afterPath="$PROJECT_DIR$/src/Controller/InductionSWController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Questionnaire.java" afterPath="$PROJECT_DIR$/src/Model/Questionnaire.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/DisplayInducteesFrame.java" afterPath="$PROJECT_DIR$/src/View/DisplayInducteesFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/MainApplication.java" afterPath="$PROJECT_DIR$/src/View/MainApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/MainDashBoardFrame.java" afterPath="$PROJECT_DIR$/src/View/MainDashBoardFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/QuestionPanel.java" afterPath="$PROJECT_DIR$/src/View/QuestionPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/QuizFrame.java" afterPath="$PROJECT_DIR$/src/View/QuizFrame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/videoPlayer/VideoPlayer.java" afterPath="$PROJECT_DIR$/src/videoPlayer/VideoPlayer.java" />
     </list>
     <ignored path="Induction-SW.iws" />
@@ -87,17 +63,17 @@
       <file leaf-file-name="VideoPlayer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/videoPlayer/VideoPlayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="43" column="110" selection-start-line="43" selection-start-column="110" selection-end-line="43" selection-end-column="110" />
+            <state relative-caret-position="197">
+              <caret line="184" column="97" selection-start-line="184" selection-start-column="97" selection-end-line="184" selection-end-column="97" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JPanelOpenCV.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JPanelOpenCV.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/view/JPanelOpenCV.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
+            <state relative-caret-position="-1650">
               <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -126,13 +102,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InductionSWController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="InductionSWController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/InductionSWController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-991">
-              <caret line="46" column="54" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="54" />
+            <state relative-caret-position="285">
+              <caret line="47" column="92" selection-start-line="47" selection-start-column="92" selection-end-line="47" selection-end-column="92" />
               <folding>
-                <element signature="e#2655#2720#0" expanded="false" />
+                <element signature="e#2748#2813#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -230,9 +206,9 @@
         <option value="$PROJECT_DIR$/src/view/MainDashBoardFrame.java" />
         <option value="$PROJECT_DIR$/src/view/QuizFrame.java" />
         <option value="$PROJECT_DIR$/src/model/Questionnaire.java" />
-        <option value="$PROJECT_DIR$/src/videoPlayer/VideoPlayer.java" />
-        <option value="$PROJECT_DIR$/src/controller/InductionSWController.java" />
         <option value="$PROJECT_DIR$/src/controller/FilePersistor.java" />
+        <option value="$PROJECT_DIR$/src/controller/InductionSWController.java" />
+        <option value="$PROJECT_DIR$/src/videoPlayer/VideoPlayer.java" />
       </list>
     </option>
   </component>
@@ -797,7 +773,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1458" height="918" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -807,7 +783,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32971016" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3471646" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3471646" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32916668" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -887,7 +863,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2655#2720#0" expanded="false" />
+            <element signature="e#2748#2813#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -932,7 +908,7 @@
         <state relative-caret-position="0">
           <caret line="107" column="0" selection-start-line="107" selection-start-column="0" selection-end-line="107" selection-end-column="0" />
           <folding>
-            <element signature="e#2655#2720#0" expanded="false" />
+            <element signature="e#2748#2813#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1274,29 +1250,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/videoPlayer/VideoPlayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="43" column="110" selection-start-line="43" selection-start-column="110" selection-end-line="43" selection-end-column="110" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/FilePersistor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="316">
           <caret line="76" column="35" selection-start-line="76" selection-start-column="35" selection-end-line="76" selection-end-column="35" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/JPanelOpenCV.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1308,12 +1266,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/videoPlayer/VideoPlayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="184" column="97" selection-start-line="184" selection-start-column="97" selection-end-line="184" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/InductionSWController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-991">
-          <caret line="46" column="54" selection-start-line="46" selection-start-column="31" selection-end-line="46" selection-end-column="54" />
+        <state relative-caret-position="285">
+          <caret line="47" column="92" selection-start-line="47" selection-start-column="92" selection-end-line="47" selection-end-column="92" />
           <folding>
-            <element signature="e#2655#2720#0" expanded="false" />
+            <element signature="e#2748#2813#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/JPanelOpenCV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1650">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
