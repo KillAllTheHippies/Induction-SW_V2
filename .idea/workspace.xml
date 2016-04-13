@@ -7,14 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e4796d8-3638-437e-be61-cca90543abd0" name="Default" comment="Quick comit before restructuring">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new.png" afterPath="$PROJECT_DIR$/new.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/artifacts/Induction_SW_jar/Induction-SW.jar" afterPath="$PROJECT_DIR$/out/artifacts/Induction_SW_jar/Induction-SW.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/Controller/InductionSWController.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/Controller/InductionSWController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/videoPlayer/VideoPlayer$6.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/videoPlayer/VideoPlayer$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/videoPlayer/VideoPlayer.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/videoPlayer/VideoPlayer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel$RadioButtonsActionListener.class" afterPath="$PROJECT_DIR$/out/production/Induction-SW/View/QuestionPanel$RadioButtonsActionListener.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Controller/InductionSWController.java" afterPath="$PROJECT_DIR$/src/Controller/InductionSWController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/videoPlayer/VideoPlayer.java" afterPath="$PROJECT_DIR$/src/videoPlayer/VideoPlayer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/View/QuestionPanel.java" afterPath="$PROJECT_DIR$/src/View/QuestionPanel.java" />
     </list>
     <ignored path="Induction-SW.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,34 +45,12 @@
       <file leaf-file-name="QuizFrame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/view/QuizFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="257" column="0" selection-start-line="257" selection-start-column="0" selection-end-line="257" selection-end-column="0" />
+            <state relative-caret-position="133">
+              <caret line="252" column="42" selection-start-line="252" selection-start-column="36" selection-end-line="252" selection-end-column="42" />
               <folding>
                 <element signature="e#1921#2001#0" expanded="false" />
                 <element signature="e#5523#5644#0" expanded="false" />
                 <element signature="e#15616#15663#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VideoPlayer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/videoPlayer/VideoPlayer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="184" column="97" selection-start-line="184" selection-start-column="97" selection-end-line="184" selection-end-column="97" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JPanelOpenCV.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/view/JPanelOpenCV.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1650">
-              <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -105,10 +79,22 @@
       <file leaf-file-name="InductionSWController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/InductionSWController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="47" column="92" selection-start-line="47" selection-start-column="92" selection-end-line="47" selection-end-column="92" />
+            <state relative-caret-position="133">
+              <caret line="156" column="14" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="14" />
               <folding>
                 <element signature="e#2748#2813#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QuestionPanel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/view/QuestionPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3783">
+              <caret line="244" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
+              <folding>
+                <element signature="e#2950#3002#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -202,13 +188,13 @@
         <option value="$PROJECT_DIR$/src/model/Inductee.java" />
         <option value="$PROJECT_DIR$/src/view/MainApplication.java" />
         <option value="$PROJECT_DIR$/src/view/DisplayInducteesFrame.java" />
-        <option value="$PROJECT_DIR$/src/view/QuestionPanel.java" />
         <option value="$PROJECT_DIR$/src/view/MainDashBoardFrame.java" />
         <option value="$PROJECT_DIR$/src/view/QuizFrame.java" />
         <option value="$PROJECT_DIR$/src/model/Questionnaire.java" />
         <option value="$PROJECT_DIR$/src/controller/FilePersistor.java" />
         <option value="$PROJECT_DIR$/src/controller/InductionSWController.java" />
         <option value="$PROJECT_DIR$/src/videoPlayer/VideoPlayer.java" />
+        <option value="$PROJECT_DIR$/src/view/QuestionPanel.java" />
       </list>
     </option>
   </component>
@@ -851,13 +837,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/view/UserInputFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/InductionSWController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1200,18 +1179,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/QuestionPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="84" column="61" selection-start-line="84" selection-start-column="61" selection-end-line="84" selection-end-column="61" />
-          <folding>
-            <element signature="e#2794#2795#0" expanded="true" />
-            <element signature="e#2830#2831#0" expanded="true" />
-            <element signature="e#2950#3002#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/MainDashBoardFrame.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1225,18 +1192,6 @@
         <state relative-caret-position="218">
           <caret line="268" column="60" selection-start-line="268" selection-start-column="60" selection-end-line="268" selection-end-column="60" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/QuizFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="257" column="0" selection-start-line="257" selection-start-column="0" selection-end-line="257" selection-end-column="0" />
-          <folding>
-            <element signature="e#1921#2001#0" expanded="false" />
-            <element signature="e#5523#5644#0" expanded="false" />
-            <element signature="e#15616#15663#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1266,6 +1221,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/JPanelOpenCV.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1650">
+          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/videoPlayer/VideoPlayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
@@ -1274,22 +1239,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/QuizFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="252" column="42" selection-start-line="252" selection-start-column="36" selection-end-line="252" selection-end-column="42" />
+          <folding>
+            <element signature="e#1921#2001#0" expanded="false" />
+            <element signature="e#5523#5644#0" expanded="false" />
+            <element signature="e#15616#15663#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/InductionSWController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="47" column="92" selection-start-line="47" selection-start-column="92" selection-end-line="47" selection-end-column="92" />
+        <state relative-caret-position="133">
+          <caret line="156" column="14" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="14" />
           <folding>
             <element signature="e#2748#2813#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/JPanelOpenCV.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_20/src.zip!/java/awt/image/BufferedImage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1650">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+        <state relative-caret-position="146">
+          <caret line="413" column="16" selection-start-line="413" selection-start-column="16" selection-end-line="413" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/QuestionPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3783">
+          <caret line="244" column="0" selection-start-line="213" selection-start-column="0" selection-end-line="244" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#2950#3002#0" expanded="false" />
           </folding>
         </state>
       </provider>
