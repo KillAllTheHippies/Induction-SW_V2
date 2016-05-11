@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="jna-3.5.2">
+    <archive path="C:/Users/Jamie/IdeaProjects/Induction-SW_V2/vlcj-3.0.1/jna-3.5.2.jar" />
+  </library>
+  <library name="miglayout-4.0-swing">
+    <archive path="C:/Users/Jamie/Documents/+COLLEGE/_3RD_YEAR/lib/miglayout-4.0-swing.jar" />
+  </library>
+  <library name="opencv_java310">
+    <archive path="C:/Users/Jamie/Desktop/FeidhlimApp/opencv/build/java/opencv-310.jar" />
+  </library>
+</eclipse-userlibraries>
+

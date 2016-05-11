@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inherit-compiler-output="true" inheritJdk="true">
+	<output-test url="file://$MODULE_DIR$/out/test/Induction-SW"/>
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="vlcj-3.0.1.jar" scope="COMPILE">
+		<relative-module-cls project-related="jar://$PROJECT_DIR$/vlcj-3.0.1/vlcj-3.0.1.jar!/"/>
+	</lib>
+	<levels>
+		<level name="miglayout-4.0-swing" value="project"/>
+		<level name="opencv_java310" value="project"/>
+		<level name="jna-3.5.2" value="project"/>
+	</levels>
+</component>

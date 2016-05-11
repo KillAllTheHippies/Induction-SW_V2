@@ -27,6 +27,7 @@ public class MainDashBoardFrame extends JFrame implements IGui{
         this.add(mainPanel);
 //        this.setSize(300,300);
         this.setVisible(true);
+        this.setLocationRelativeTo(null);
         this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
     }

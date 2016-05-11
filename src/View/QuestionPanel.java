@@ -25,7 +25,7 @@ public class QuestionPanel extends JPanel {
     private JRadioButton btn1,btn2,btn3,btn4;
     private ButtonGroup btnGroup;
     private ArrayList<JRadioButton> btnArray = new ArrayList<>();
-    private BufferedImage im;
+//    private BufferedImage im;
 
 
 //    private DataModel dataModel;
@@ -210,36 +210,4 @@ public class QuestionPanel extends JPanel {
         }// end actionperformed
 
     }
-
-//    private JPanel createQuestionPanel(MultipleChoiceQuestion q) {
-//
-//        JPanel jp = new JPanel();
-//
-//
-//        btn1 = new JRadioButton();
-//        btn2 = new JRadioButton();
-//        btn3 = new JRadioButton();
-//        btn4 = new JRadioButton();
-//        btnArray.add(btn1);
-//        btnArray.add(btn2);
-//        btnArray.add(btn3);
-//        btnArray.add(btn4);
-//
-//
-//        JLabel lblQuestion = new JLabel(q.getText());
-//        jp.add(lblQuestion);
-////        for (String s : q.getChoices()) {
-////            for (JRadioButton btn : btnArray) {
-////                btn = new JRadioButton(s);
-////                btnGroup.add(btn);
-////                jp.add(btn);
-////            }
-////        }
-//
-//
-//        // return the fully constructed panel
-//        //jp.setVisible(true);
-//        return jp;
-//
-//    }
 

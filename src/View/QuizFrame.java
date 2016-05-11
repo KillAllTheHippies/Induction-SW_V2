@@ -294,29 +294,12 @@ public class QuizFrame extends JFrame {
                                 "Please watch the induction video again and attempt to answer at least " +
                                 InductionSWController.QUIZ_PASS_PERCENTAGE + "% correct.");
 
-                        JLabel wrongLabel = new JLabel("Your wrong answers. ");
                         panel.add(scoreLabel);
                         panel.add(passLabel);
-                        panel.add(wrongLabel);
                         panel.add(Box.createVerticalStrut(5));
                         panel.add(new JSeparator(JSeparator.HORIZONTAL));
 
-                        for (String wrongAnswer : InductionSWController.getInstance().getCurrentInductee().getWrongAnswers()) {
-                    /* create a label with the wrong answer and add it to the panel
-                     * wrongAnswer format: Wrong_answer|Correct_answer|Question_index
-                     * Wrong answer = 0, correct answer = 1 question index = 2*/
-                            String[] data = wrongAnswer.split("\\|");
 
-                            panel.add(new JLabel("Question " + (Integer.parseInt(data[2]) + 1) + ":"));
-                            panel.add(new JLabel(InductionSWController.getInstance().getQuestionnaire()
-                                    .getQuestions().get(Integer.parseInt(data[2])).getText()));
-                            panel.add(new JLabel("Your answer: " + data[0]));
-//                            panel.add(new JLabel("The Correct Answer was: " + data[1]));
-                            panel.add(Box.createVerticalStrut(5));
-                            panel.add(new JSeparator(JSeparator.HORIZONTAL));
-
-
-                        }
                         JPanel bottomButtonPanel = new JPanel();
                         JButton reTakeQuizBtn = new JButton("Re-take Assessment");
                         reTakeQuizBtn.addActionListener(new ButtonsActionListener(outerClass) {

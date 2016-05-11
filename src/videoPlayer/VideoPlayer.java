@@ -41,8 +41,10 @@ public class VideoPlayer {
     private final JButton continueButton;
 
     public static void main(final String[] args) {
+        //ABSOLUTE PATH TO VLC LIBRARIES
         NativeLibrary.addSearchPath(RuntimeUtil.getLibVlcLibraryName(), InductionSWController.VLC_LIB_LOCATION);
         Native.loadLibrary(RuntimeUtil.getLibVlcLibraryName(), LibVlc.class);
+        // AUTO FIND VLC LIBRARIES
 //        System.loadLibrary(Core.NATIVE_LIBRARY_NAME);
 //        new NativeDiscovery().discover();
         SwingUtilities.invokeLater(new Runnable() {
@@ -120,7 +122,6 @@ public class VideoPlayer {
                 qf.setSize(640,480);
                 qf.setExtendedState(JFrame.MAXIMIZED_BOTH); // Fullscreen
 
-//                InductionSWController.getInstance().lauchQuiz();
                 closeWindow();
             }
         });
@@ -168,9 +169,10 @@ public class VideoPlayer {
                     public void run() {
                         JOptionPane.showMessageDialog(
                                 frame,
-                                "Failed to play media",
+                                "Failed to play media ",
                                 "Error",
                                 JOptionPane.ERROR_MESSAGE
+
                         );
                         closeWindow();
                     }
